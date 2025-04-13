@@ -15,6 +15,8 @@ export default function RootLayout({
       <body>
         <div>
           <Navbar />
+          <div className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat bg-fixed" 
+          style={{backgroundImage: "url('/images/bliss-wallpaper.jpg')"}} />
           <Taskbar />
         </div>
       </body>
