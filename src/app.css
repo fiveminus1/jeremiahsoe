@@ -1,5 +1,33 @@
+:root {
+    --color-bg: #ffffff;
+    --color-text: #111111;
+    --color-accent: #315659;
+    --color-muted: #666;
+}
+
+[data-theme="dark"] {
+    --color-bg: #253031;
+    --color-text: #C6E0FF;
+    --color-accent: #C6E0FF;
+    --color-muted: #aaa;
+}
+
+[data-theme="light"] {
+    --color-bg: #C6E0FF;
+    --color-text: #253031;
+    --color-accent: #315659;
+    --color-muted: #444;
+}
+
 body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: 'Manrope', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: var(--color-accent);
 }
 
 h1, h2, h3, h4{
