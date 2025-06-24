@@ -1,5 +1,5 @@
 <script>
-    let theme = "light";
+    let theme = "dark";
     function toggleTheme(){
         theme = theme === "light" ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
