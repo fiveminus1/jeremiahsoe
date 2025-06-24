@@ -1,0 +1,28 @@
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .socials {
+    margin-top: 0.5rem;
+    
+    a {
+      margin: 0 0.5rem;
+    }
+
+    a svg {
+      width: 28px;
+      height: 28px;
+      color: var(--color-text);
+    }
+
+    a:hover svg{
+      color: var(--color-accent)
+    }
+  }
+}
+

@@ -1,5 +1,5 @@
 <script>
-    import "../app.css"
+    import "../app.scss"
 </script>
 
 <h1>Welcome to SvelteKit</h1>
