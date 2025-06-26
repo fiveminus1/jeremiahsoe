@@ -1,6 +1,6 @@
 <script>
     import './Footer.scss';
-    import Icon from '@iconify/svelte';
+    import { IconBrandGithub, IconBrandLinkedin, IconMail, IconMoon, IconSun } from '@tabler/icons-svelte';
 
     let theme = "dark";
     function toggleTheme(){
@@ -14,19 +14,23 @@
         <p>Copyright {new Date().getFullYear()} (c) Jeremiah Soe. Built with ❤️ using SvelteKit.</p>
         <div class="socials">
             <a href="https://github.com/fiveminus1" target="_blank">
-              <Icon icon="tabler:brand-github" />
+              <IconBrandGithub />
             </a>
             
             <a href="https://www.linkedin.com/in/jeremiah-soe/" target="_blank">
-              <Icon icon="tabler:brand-linkedin" />
+              <IconBrandLinkedin />
             </a>
 
             <a href="mailto:jeremiahjsoe@gmail.com">
-              <Icon icon="tabler:mail" />
+              <IconMail />
             </a>
 
             <button class="theme-toggle" on:click={toggleTheme}>
-              <Icon icon={theme === 'light' ? 'tabler:moon' : 'tabler:sun'} />
+              {#if theme === 'light'}
+                <IconMoon />
+              {:else}
+                <IconSun />
+              {/if}
             </button>
         </div>
     </div>
