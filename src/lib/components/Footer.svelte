@@ -1,6 +1,12 @@
 <script>
     import './Footer.scss';
     import Icon from '@iconify/svelte';
+
+    let theme = "dark";
+    function toggleTheme(){
+        theme = theme === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+    }
 </script>
 
 <footer class="footer">
@@ -18,6 +24,10 @@
             <a href="mailto:jeremiahjsoe@gmail.com">
               <Icon icon="tabler:mail" />
             </a>
+
+            <button class="theme-toggle" on:click={toggleTheme}>
+              <Icon icon={theme === 'light' ? 'tabler:moon' : 'tabler:sun'} />
+            </button>
         </div>
     </div>
 </footer>

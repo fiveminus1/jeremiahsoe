@@ -9,18 +9,25 @@
 
   .socials {
     margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     
-    a {
-      margin: 0 0.5rem;
+    a, button.theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
     }
 
-    a svg {
+    a svg, button.theme-toggle svg {
       width: 28px;
       height: 28px;
       color: var(--color-text);
     }
 
-    a:hover svg{
+    a:hover svg, button.theme-toggle:hover svg{
       color: var(--color-accent)
     }
   }

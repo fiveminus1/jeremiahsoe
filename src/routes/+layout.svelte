@@ -1,5 +1,4 @@
 <script>
-    import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
     import Hero from "$lib/components/Hero.svelte";
     import "../app.scss";
@@ -11,12 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">    
 </svelte:head>
 
-<Navbar />
+<div class="page-wrapper">
+  <Hero />
+  <main>
+      <slot />
+  </main>
 
-<Hero />
-
-<main>
-    <slot />
-</main>
-
-<Footer />
+  <Footer />
+</div>
