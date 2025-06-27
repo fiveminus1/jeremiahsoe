@@ -4,52 +4,18 @@
 	import About from '$lib/components/About.svelte';
 	import '../app.scss';
 	import { onMount } from 'svelte';
+  import { createScrollSnap, easeInOut } from '../utils/scroll';
 
-	let scrollProgress = 0;
   const numSlides = 2;
-  let snapTimeout: ReturnType<typeof setTimeout>;
-
+	let scrollProgress = 0;
+  let currentSlide = 0;
   $: eased = easeInOut(scrollProgress);
 
-  function easeInOut(t: number): number {
-    return t < 0.5
-      ? 4 * t * t * t
-      : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
-
-  let lastScrollY = 0;
-
-	function handleScroll() {
-    const scrollY = window.scrollY;
-    const vh = window.innerHeight;
-    const deltaY = scrollY - lastScrollY;
-    lastScrollY = scrollY;
-
-    scrollProgress = Math.min(scrollY / (vh * (numSlides - 1)), 1);
-
-    clearTimeout(snapTimeout);
-    snapTimeout = setTimeout(() => {
-      const bias = 0.1;
-      let targetSection;
-
-      if (deltaY > 0) {
-        targetSection = scrollProgress % 1 > bias
-          ? Math.ceil(scrollProgress)
-          : Math.floor(scrollProgress);
-      } else {
-        targetSection = scrollProgress % 1 < (1 - bias)
-          ? Math.floor(scrollProgress)
-          : Math.ceil(scrollProgress);
-      }
-
-      window.scrollTo({
-        top: targetSection * vh,
-        behavior: 'smooth'
-    });
-  }, 100);
-}
-
-  
+  const { handleScroll } = createScrollSnap({
+    numSlides,
+    onSlideChange: (index) => currentSlide = index,
+    onProgress: (progress) => scrollProgress = progress,
+  });
 
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
