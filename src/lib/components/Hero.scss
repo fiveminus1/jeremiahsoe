@@ -1,8 +1,12 @@
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  transition: opacity 0.3s ease;  
 }
 
 .hero-content{

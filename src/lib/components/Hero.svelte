@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
   import './Hero.scss';
   import { fly } from 'svelte/transition'; 
   import { onMount } from 'svelte';
+
   let show = false;
   onMount(() => {
     show = true;
   });
+
 </script>
 
 <div class="hero"> 

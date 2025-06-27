@@ -37,12 +37,25 @@ html, body{
   margin: 0;
 }
 
-.page-wrapper{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.page-wrapper {
+  position: relative;
 }
 
-main {
-  flex: 1;
+.scroll-spacer {
+  height: 200vh;
+  z-index: 1;
+}
+
+.slides-container {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
