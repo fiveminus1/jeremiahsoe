@@ -1,6 +1,8 @@
 .footer {
   text-align: center;
   font-size: 0.9rem;
+  z-index: 1;
+  position: relative;
 
   .footer-content {
     max-width: 800px;
