@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Link, Button, HStack } from "@chakra-ui/react";
+import { Box, Flex, Button, HStack } from "@chakra-ui/react";
 
 const scrollToSection = (sectionId: string) => {
   const section = document.querySelector(sectionId);
@@ -9,7 +9,7 @@ const scrollToSection = (sectionId: string) => {
 
 const Navbar = () => {
   return (
-    <Box as="header" position="sticky" top="0" zIndex="10" bg="black" boxShadow="sm" px={4} py={3}> 
+    <Box as="header" position="sticky" top="0" zIndex="10" bg="bg.subtle" color="fg" boxShadow="sm" px={4} py={3}> 
       <Flex maxW="6xl" mx="auto" justify="center" align="center">
         <HStack>
           <Box fontWeight="bold" fontSize="lg" px={4} py={2}>
