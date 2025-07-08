@@ -18,6 +18,10 @@ const config = defineConfig({
         accentLight:       { value: "#324A5F" },
         mutedLight:        { value: "#666666" },
       },
+      fonts: {
+        heading: { value: "var(--font-inter)" },
+        body: { value: "var(--font-manrope)" },
+      }
     },
     semanticTokens: {
       colors: {

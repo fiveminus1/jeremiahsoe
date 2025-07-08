@@ -13,7 +13,7 @@ const Navbar = () => {
       <Flex maxW="6xl" mx="auto" justify="center" align="center">
         <HStack>
           <Box fontWeight="bold" fontSize="lg" px={4} py={2}>
-            jeremiahsoe {/* todo: want to keep this? */}
+            JeremiahSoe {/* todo: want to keep this? */}
           </Box>
           <Button bg="primary" color="fg" variant="ghost" onClick={() => scrollToSection("#about")} px={4} py={2}>
             About
