@@ -3,7 +3,7 @@
 import { Box, Separator } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   return (
