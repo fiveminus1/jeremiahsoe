@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <Box bg="bg">
+    <Box bg="bg" color="fg">
       <Navbar />
       <Hero />
     </Box>

@@ -4,11 +4,19 @@ const config = defineConfig({
   theme: {
     tokens: {
       colors: {
-        primary:   { value: "#1E2749" },
-        accent:    { value: "#517664" },
-        highlight: { value: "#A7ADC6" },
-        bgDark:    { value: "#273469" },
-        bgLight:   { value: "#FAFAFF" },
+        bgDark:            { value: "#000000" },
+        surfaceDark:       { value: "#0C1821" },
+        surfaceElevatedDark: { value: "#1B2A41" },
+        textDark:          { value: "#CCC9DC" },
+        accentDark:        { value: "#324A5F" },
+        mutedDark:         { value: "#888888" },
+
+        bgLight:           { value: "#CCC9DC" },
+        surfaceLight:      { value: "#ffffff" },
+        surfaceElevatedLight: { value: "#f0f0f5" },
+        textLight:         { value: "#1B2A41" },
+        accentLight:       { value: "#324A5F" },
+        mutedLight:        { value: "#666666" },
       },
     },
     semanticTokens: {
@@ -20,43 +28,54 @@ const config = defineConfig({
               _dark: "{colors.bgDark}",
             },
           },
-          subtle: {
+        },
+        surface: {
+          DEFAULT: {
             value: {
-              _light: "{colors.highlight}",
-              _dark: "#1f254a",
+              _light: "{colors.surfaceLight}",
+              _dark: "{colors.surfaceDark}",
+            },
+          },
+          elevated: {
+            value: {
+              _light: "{colors.surfaceElevatedLight}",
+              _dark: "{colors.surfaceElevatedDark}",
             },
           },
         },
         fg: {
           DEFAULT: {
             value: {
-              _light: "#1a202c", // default Chakra gray.800
-              _dark: "#FAFAFF",
+              _light: "{colors.textLight}",
+              _dark: "{colors.textDark}",
             },
           },
           muted: {
             value: {
-              _light: "#4A5568", // gray.600
-              _dark: "{colors.highlight}",
+              _light: "{colors.mutedLight}",
+              _dark: "{colors.mutedDark}",
             },
           },
         },
         border: {
           DEFAULT: {
             value: {
-              _light: "#CBD5E0", // gray.300
-              _dark: "{colors.accent}",
+              _light: "{colors.accentLight}",
+              _dark: "{colors.accentDark}",
             },
           },
         },
         primary: {
           DEFAULT: {
-            value: "{colors.primary}",
+            value: {
+              _light: "{colors.accentLight}",
+              _dark: "{colors.accentDark}",
+            },
           },
           muted: {
             value: {
-              _light: "{colors.accent}",
-              _dark: "{colors.accent}",
+              _light: "{colors.mutedLight}",
+              _dark: "{colors.mutedDark}",
             },
           },
         },
