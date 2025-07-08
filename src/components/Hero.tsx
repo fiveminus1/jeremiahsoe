@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <Box id="hero" minH="100vh" display="flex" justifyContent="left" px={12} py={16}>
+    <Box id="hero" minH="100vh" display="flex" justifyContent="left" alignItems="center" px={12} py={16}>
       <Stack direction="column" textAlign="left">
         <Heading size="6xl" fontWeight="bold">
           <Highlight 
