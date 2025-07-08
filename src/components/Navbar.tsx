@@ -1,4 +1,11 @@
-import { Box, Flex, Link, HStack } from "@chakra-ui/react";
+"use client";
+
+import { Box, Flex, Link, Button, HStack } from "@chakra-ui/react";
+
+const scrollToSection = (sectionId: string) => {
+  const section = document.querySelector(sectionId);
+  section?.scrollIntoView({ behavior: "smooth" });
+};
 
 const Navbar = () => {
   return (
@@ -8,12 +15,12 @@ const Navbar = () => {
           <Box fontWeight="bold" fontSize="lg" px={4} py={2}>
             jeremiahsoe {/* todo: want to keep this? */}
           </Box>
-          <Link href="#about" fontWeight="medium" px={4} py={2}>
+          <Button variant="ghost" onClick={() => scrollToSection("#about")} px={4} py={2}>
             About
-          </Link>
-          <Link href="#projects" fontWeight="medium" px={4} py={2}>
+          </Button>
+          <Button variant="ghost" onClick={() => scrollToSection("#projects")} px={4} py={2}>
             Projects
-          </Link>
+          </Button>
         </HStack>
       </Flex>
     </Box>
