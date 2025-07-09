@@ -35,13 +35,18 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Box id="projects" display="flex" justifyContent="center" px={12}>
-      <VStack>
-        <Heading size="5xl" fontWeight="bold">
+    <Box id="projects" py={12}>
+      <VStack align="stretch">
+        <Heading size="5xl" fontWeight="bold" textAlign="left" py={4}>
           Projects
         </Heading>
 
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} columnGap="4" rowGap="4">
+        <SimpleGrid 
+          columns={{ base: 1, md: 2, lg: 3 }} 
+          columnGap="12" 
+          rowGap="8"
+          justifyItems="start"
+        >
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}

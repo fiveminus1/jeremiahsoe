@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Separator } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import Hero from "../components/Hero/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects/Projects";
@@ -8,11 +8,13 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <Box bg="bg" color="fg">
+    <Flex direction="column" minH="10vh" bg="bg" color="fg">
       <Navbar />
-      <Hero />
-      <Projects />
+      <Container maxW="7xl" flex="1" px={{base: 4, md: 12}}>
+        <Hero />
+        <Projects />
+      </Container>
       <Footer />
-    </Box>
+    </Flex>
   );
 }
