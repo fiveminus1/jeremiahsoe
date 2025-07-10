@@ -1,10 +1,11 @@
 import { Box, Heading, Stack, Text, Highlight, HStack, IconButton, useBreakpointValue } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
+import ResumeModal from "./ResumeModal";
 
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
-  
+
   return (
     <Box 
       id="hero" 
@@ -40,6 +41,8 @@ const Hero = () => {
           >
             <FaLinkedin />
           </IconButton>
+
+          <ResumeModal />
         </HStack>
       </Stack>
     </Box>
