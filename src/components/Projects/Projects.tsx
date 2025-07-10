@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Card, Heading, HStack, Image, Tag, Wrap, VStack, SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 
 const projects = [

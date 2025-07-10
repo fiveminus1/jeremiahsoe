@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
+  
   return (
     <Box 
       id="hero" 
