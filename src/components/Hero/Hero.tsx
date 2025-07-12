@@ -15,7 +15,7 @@ const Hero = () => {
 
   const [typedText, { isDone }] = useTypewriter({
     words: [
-      "I'm a full-stack software engineer currently studying Computer Science at the University of California, Irvine."
+      "Full-stack software engineer studying Computer Science at the University of California, Irvine."
     ],
     loop: 1,
     typeSpeed: 20,
@@ -73,7 +73,7 @@ const Hero = () => {
                   query={["Computer Science"]}
                   styles={{ bg: "accentDark" }}
                 >
-                  I'm a full-stack software engineer currently studying Computer Science at the
+                  Full-stack software engineer studying Computer Science at the 
                 </Highlight>
                 {" "}
                 <Link href="https://uci.edu" color="textDark">
