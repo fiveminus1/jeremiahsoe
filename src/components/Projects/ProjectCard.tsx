@@ -7,11 +7,12 @@ interface ProjectCardProps {
   description: string;
   imageSrc: string;
   tags: string[];
+  onClick?: () => void;
 }
 
-const ProjectCard = ({ title, description, imageSrc, tags }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCardProps) => {
   return (
-    <Card.Root width="400px">
+    <Card.Root width="400px" onClick={onClick} cursor="pointer" _hover={{boxShadow: "lg"}}> {/* todo: update hover effect */}
       <Image
         src={imageSrc}
         height="200px"

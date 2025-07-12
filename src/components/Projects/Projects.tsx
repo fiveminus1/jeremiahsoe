@@ -1,14 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { Box, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 
 const projects = [
   {
     title: "Fabflix",
     description: "Blah blah blah..." ,
     imageSrc: //todo: update hosting and image
-      "https://cdn.discordapp.com/attachments/1164416239209295923/1392273564480176139/IMG_3026.jpeg?ex=686eef4c&is=686d9dcc&hm=53a3d8f213056bc1951fe7fda29951858d7e6a32a98e6a48e3d4906359c67330&",
+      "/project_temp.jpeg",
     tags: [
       "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
@@ -17,7 +19,7 @@ const projects = [
     title: "Fabflix2",
     description: "Blah blah blah..." ,
     imageSrc: //todo: update hosting and image
-      "https://cdn.discordapp.com/attachments/1164416239209295923/1392273564480176139/IMG_3026.jpeg?ex=686eef4c&is=686d9dcc&hm=53a3d8f213056bc1951fe7fda29951858d7e6a32a98e6a48e3d4906359c67330&",
+      "/project_temp.jpeg",
     tags: [
       "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
@@ -26,7 +28,7 @@ const projects = [
     title: "Fabflix3",
     description: "Blah blah blah..." ,
     imageSrc: //todo: update hosting and image
-      "https://cdn.discordapp.com/attachments/1164416239209295923/1392273564480176139/IMG_3026.jpeg?ex=686eef4c&is=686d9dcc&hm=53a3d8f213056bc1951fe7fda29951858d7e6a32a98e6a48e3d4906359c67330&",
+      "/project_temp.jpeg",
     tags: [
       "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
@@ -34,6 +36,7 @@ const projects = [
 ]
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   return (
     <Box id="projects" py={12}>
       <VStack align="stretch">
@@ -48,9 +51,15 @@ const Projects = () => {
           justifyItems="start"
         >
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCard key={project.title} {...project} onClick={() => setSelectedProject(project)} />
           ))}
         </SimpleGrid>
+
+        <ProjectModal
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+          project={selectedProject}
+        />
       </VStack>
     </Box>
   );
