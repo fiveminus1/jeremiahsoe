@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Box, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
+import { Box, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, DialogBackdrop, DialogPositioner, DialogContent } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 
@@ -36,7 +35,6 @@ const projects = [
 ]
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   return (
     <Box id="projects" py={12}>
       <VStack align="stretch">
@@ -51,15 +49,30 @@ const Projects = () => {
           justifyItems="start"
         >
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} onClick={() => setSelectedProject(project)} />
+            <Dialog.Root scrollBehavior="inside" size="md" key={project.title}>
+              <Dialog.Trigger asChild>
+                <ProjectCard {...project} />
+              </Dialog.Trigger>
+
+              <Portal>
+                <DialogBackdrop />
+                <DialogPositioner>
+                  <DialogContent w="500px">
+                    <Dialog.Header>
+                      <Dialog.Title>{project.title}</Dialog.Title>
+                      <Dialog.CloseTrigger asChild>
+                        <CloseButton size="sm" />
+                      </Dialog.CloseTrigger>
+                    </Dialog.Header>
+                    <Dialog.Body overflowY="auto" p={0}>
+                      <ProjectModal project={project} />
+                    </Dialog.Body>
+                  </DialogContent>
+                </DialogPositioner>
+              </Portal>
+            </Dialog.Root>
           ))}
         </SimpleGrid>
-
-        <ProjectModal
-          isOpen={!!selectedProject}
-          onClose={() => setSelectedProject(null)}
-          project={selectedProject}
-        />
       </VStack>
     </Box>
   );
