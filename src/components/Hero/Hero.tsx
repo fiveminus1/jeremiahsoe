@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text, Highlight, HStack, IconButton, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Highlight, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
 
@@ -17,15 +17,20 @@ const Hero = () => {
     >
       <Stack direction="column" maxW="4xl" textAlign="left">
         <Heading fontSize={headingSize} fontWeight="bold" lineHeight="short">
-          <Highlight 
-            query={["Jeremiah Soe"]}
-            styles={{ bg: "accentDark"}}
-          >
-          Blah blah, Jeremiah Soe.
-          </Highlight>
+          Jeremiah Soe
+   
         </Heading>
         <Text fontSize={textSize}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <Highlight 
+            query={["Computer Science"]}
+            styles={{ bg: "accentDark" }}
+          >
+            I'm a full-stack software engineer currently studying Computer Science at the 
+          </Highlight>
+          {" "}
+          <Link href="https://uci.edu" color="textDark">
+            University of California, Irvine.
+          </Link>
         </Text>
 
         <HStack py={4}>
