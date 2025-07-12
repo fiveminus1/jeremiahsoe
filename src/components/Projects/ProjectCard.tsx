@@ -1,12 +1,9 @@
 "use client";
 
 import { Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
+import type { Project } from "@/types/types";
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  imageSrc: string;
-  tags: string[];
+interface ProjectCardProps extends Project {
   onClick?: () => void;
 }
 

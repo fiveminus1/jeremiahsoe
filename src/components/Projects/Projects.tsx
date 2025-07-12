@@ -3,8 +3,9 @@
 import { Box, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, DialogBackdrop, DialogPositioner, DialogContent } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+import type { Project } from "@/types/types";
 
-const projects = [
+const projects: Project[] = [
   {
     title: "Fabflix",
     description: "Blah blah blah..." ,

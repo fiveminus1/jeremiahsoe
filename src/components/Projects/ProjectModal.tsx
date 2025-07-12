@@ -1,17 +1,11 @@
-import { Image, Text, VStack, Heading, Wrap, Tag } from "@chakra-ui/react";
+import { Image, Text, VStack, Wrap, Tag } from "@chakra-ui/react";
+import type { Project } from "@/types/types";
 
 interface ProjectModalProps {
-  project: { //todo: make new type
-    title: string;
-    description: string; 
-    imageSrc: string;
-    tags: string[];
-  } | null;
+  project: Project;
 }
 
 const ProjectModal = ({ project }: ProjectModalProps) => {
-  if (!project) return null;
-
   return (
     <>
       <Image src={project.imageSrc} alt={project.title} width="100%" />
