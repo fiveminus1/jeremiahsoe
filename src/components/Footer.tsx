@@ -2,7 +2,7 @@
 
 import { Box, Flex, Text, Link, VStack, HStack } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,6 +22,10 @@ const Footer = () => {
             <HStack gap={1}>
               <MdEmail size={16} />
               <Link fontSize="sm" href="mailto:jeremiahjsoe@gmail.com">Email</Link>
+            </HStack>
+            <HStack gap={1}>
+              <FaGithub size={16} />
+              <Link fontSize="sm" href="https://github.com/fiveminus1">GitHub</Link>
             </HStack>
             <HStack gap={1}>
               <FaLinkedin size={16} />

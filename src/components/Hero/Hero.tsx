@@ -4,6 +4,7 @@ import ResumeModal from "./ResumeModal";
 import { AnimatePresence, motion } from "framer-motion";
 import { chakra } from "@chakra-ui/react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { MdEmail } from "react-icons/md";
 
 const MotionHeading = motion.create(chakra.h1); 
 const MotionBox = motion.create(Box);
@@ -90,18 +91,32 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <HStack py={4}>
-            <IconButton 
-              aria-label="GitHub"
-              variant="surface"
-            >
-              <FaGithub />
-            </IconButton>
-            <IconButton 
-              aria-label="LinkedIn"
-              variant="surface"
-            >
-              <FaLinkedin />
-            </IconButton>
+            <Link href="mailto:jeremiahjsoe@gmail.com">
+              <IconButton 
+                aria-label="Email"
+                variant="surface"
+              >
+                <MdEmail />
+              </IconButton>
+            </Link>
+
+            <Link href="https://github.com/fiveminus1">
+              <IconButton 
+                aria-label="GitHub"
+                variant="surface"
+              >
+                <FaGithub />
+              </IconButton>
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/jeremiah-soe/">
+              <IconButton 
+                aria-label="LinkedIn"
+                variant="surface"
+              >
+                <FaLinkedin />
+              </IconButton>
+            </Link>
 
             <ResumeModal />
           </HStack>
