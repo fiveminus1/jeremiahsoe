@@ -29,6 +29,15 @@ const Navbar = () => {
             variant="ghost"
             color="fg"
             height="55px"
+            onClick={() => scrollToSection("#skills")}
+          >
+            Skills
+          </Button>
+
+          <Button 
+            variant="ghost"
+            color="fg"
+            height="55px"
             onClick={() => scrollToSection("#projects")}
           >
             Projects

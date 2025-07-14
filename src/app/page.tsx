@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <Flex direction="column" minH="10vh" bg="bg" color="fg">
       <Navbar />
-      <Hero />
-      <Container maxW="7xl" flex="1" px={{base: 4, md: 12}}>
+
+      <Container maxW="7xl" flex="1" px={{base: 4, md: 8}}>
+        <Hero />
         <About />
         <Skills />
         <Projects />

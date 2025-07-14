@@ -27,13 +27,11 @@ const Hero = () => {
   return (
     <Box 
       id="hero" 
-      minH="100vh" 
       display="flex" 
       alignItems="center" 
-      py={{base:12, md:16}}
-      px={{base:6, md:12}}
+      py={{base:24, md:32}}
     >
-      <Stack direction="column" maxW="4xl" textAlign="left">
+      <Stack direction="column" maxW="5xl" textAlign="left">
         <MotionHeading 
           fontSize={headingSize} 
           fontWeight="bold" 
@@ -44,7 +42,7 @@ const Hero = () => {
           transition={{ duration: 0.15, ease: "easeInOut" }}
         >
           Jeremiah Soe
-   
+  
         </MotionHeading>
 
         <AnimatePresence mode="wait">
