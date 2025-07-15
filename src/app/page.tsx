@@ -3,7 +3,7 @@
 import { Container, Flex } from "@chakra-ui/react";
 import Hero from "../components/Hero/Hero";
 import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects/Work";
+import Projects from "@/components/Work/Work";
 import Skills from "@/components/Skills/Skills";
 import Footer from "@/components/Footer";
 import About from "@/components/About/About";
