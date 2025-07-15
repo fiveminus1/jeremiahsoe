@@ -18,7 +18,7 @@ const skills = [
 const Skills = () => {
   return (
     <VStack align="stretch" id="skills">
-      <Heading size="5xl" fontWeight="bold" textAlign="left" py={4}>
+      <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
         Skills
       </Heading>
 

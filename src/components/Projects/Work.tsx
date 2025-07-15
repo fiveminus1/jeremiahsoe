@@ -37,10 +37,10 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <Box id="projects" py={12}>
+    <Box id="work" py={12}>
       <VStack align="stretch">
-        <Heading size="5xl" fontWeight="bold" textAlign="left" py={4}>
-          Projects
+        <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
+          Work
         </Heading>
 
         <SimpleGrid 

@@ -38,9 +38,9 @@ const Navbar = () => {
             variant="ghost"
             color="fg"
             height="55px"
-            onClick={() => scrollToSection("#projects")}
+            onClick={() => scrollToSection("#work")}
           >
-            Projects
+            Work
           </Button>
         </HStack>
       </Flex>

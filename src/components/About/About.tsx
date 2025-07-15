@@ -9,7 +9,7 @@ const About = () => {
       py={12}
     >
       <VStack align="stretch">
-        <Heading size="5xl" fontWeight="bold" textAlign="left" py={4}>
+        <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
           About me
         </Heading>
 
