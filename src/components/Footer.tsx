@@ -34,11 +34,7 @@ const Footer = () => {
           </HStack>
         </VStack>
         <VStack align={{base: "center", md: "flex-end"}} textAlign={{base: "center", md: "right"}}>
-          <Text fontSize="sm">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. Built using{" "}
-            <Link href="https://nextjs.org/">Next.js</Link>{", "}
-            <Link href="https://chakra-ui.com/">Chakra UI</Link>{", and "}
-            <Link href="https://motion.dev/">Motion</Link>{"."}
-          </Text>
+          <Text fontSize="sm">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. </Text>
         </VStack>
       </Flex>
     </Box>

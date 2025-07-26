@@ -10,12 +10,12 @@ const scrollToSection = (sectionId: string) => {
 const Navbar = () => {
   return (
     <Box as="header" position="sticky" top="0" zIndex="10" bg="surface.elevated" color="fg" boxShadow="sm" px={4} height="60px" display="flex" alignItems="center"> 
-      <Flex maxW="6xl" mx="auto" justify="space-between" align="center" height="100%">
+      <Flex maxW="6xl" mx="auto" align="center" height="100%" width="100%">
         <Box fontWeight="bold" fontSize="lg" px={4}>
-            JeremiahSoe {/* todo: want to keep this? */}
+            Jeremiah Soe {/* todo: want to keep this? */}
         </Box>
 
-        <HStack align="center" height="100%" gap={0}>
+        <HStack align="center" height="100%" gap={0} ml="auto">
           <Button 
             variant="ghost"
             color="fg"
