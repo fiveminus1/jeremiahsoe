@@ -30,6 +30,7 @@ const Skills = () => {
       <Card.Root
         width="100%"
         p={6}
+        borderColor="gray.800"
       >
         <motion.div
           ref={ref}

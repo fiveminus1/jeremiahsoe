@@ -10,11 +10,15 @@ import About from "@/components/About/About";
 
 export default function Home() {
   return (
-    <Flex direction="column" minH="10vh" bg="bg" color="fg">
-      <Navbar />
-      
+    <Flex 
+      direction="column" 
+      bgGradient="to-br"
+      gradientFrom="gray.950"
+      gradientVia="blue.950"
+      gradientTo="blue.900"
+      color="fg"
+    >      
       <Hero />
-
       <Container maxW="7xl" flex="1" px={{base: 4, md: 8}}>
         <About />
         <Skills />

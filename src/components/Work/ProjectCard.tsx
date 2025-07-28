@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
+import { Box,Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import { motion } from "framer-motion";
 import { chakra } from "@chakra-ui/react";
@@ -22,7 +22,9 @@ const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCar
         scale: 1.02,
         boxShadow: "0px 16px 24px rgba(0, 0, 0, 0.15)",
       }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+      transition={{ duration: 0.2, ease: "easeOut" }}      
+      bgGradient="cardBgDark"
+      borderColor="gray.800"
     > 
       <Image
         src={imageSrc}
@@ -45,7 +47,7 @@ const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCar
           </Wrap>
         </VStack>
       </Card.Body> 
-    </MotionCard>
+    </MotionCard >
   )
 };
 

@@ -18,10 +18,13 @@ const config = defineConfig({
         accentLight:       { value: "#324A5F" },
         mutedLight:        { value: "#666666" },
       },
+      gradients: {
+        cardBgDark: { value: "linear-gradient(to right, var(--chakra-colors-bg-panel), #141a2cff 90%)"}
+      },
       fonts: {
         heading: { value: "var(--font-inter)" },
         body: { value: "var(--font-manrope)" },
-      }
+      },
     },
     semanticTokens: {
       colors: {
@@ -82,6 +85,14 @@ const config = defineConfig({
               _dark: "{colors.mutedDark}",
             },
           },
+        },
+        raised: {
+          DEFAULT: {
+            value: {
+              _light: "{colors.raisedLight}",
+              _dark: "{colors.raisedDark}",
+            }
+          }
         },
       },
     },

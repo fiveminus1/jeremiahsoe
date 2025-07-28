@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Box as="footer" width="100%" py={6} mt={12} bg="surface.elevated">
+    <Box as="footer" width="100%" py={6} mt={12} >
       <Flex
         direction={{ base: "column", md: "row"}}
         justify="space-between"
@@ -21,15 +21,15 @@ const Footer = () => {
           <HStack>
             <HStack gap={1}>
               <MdEmail size={16} />
-              <Link fontSize="sm" href="mailto:jeremiahjsoe@gmail.com">Email</Link>
+              <Link fontSize="sm" color="#60a5fa" href="mailto:jeremiahjsoe@gmail.com">Email</Link>
             </HStack>
             <HStack gap={1}>
               <FaGithub size={16} />
-              <Link fontSize="sm" href="https://github.com/fiveminus1">GitHub</Link>
+              <Link fontSize="sm" color="#60a5fa" href="https://github.com/fiveminus1">GitHub</Link>
             </HStack>
             <HStack gap={1}>
               <FaLinkedin size={16} />
-              <Link fontSize="sm" href="https://www.linkedin.com/in/jeremiah-soe/">LinkedIn</Link>
+              <Link fontSize="sm" color="#60a5fa" href="https://www.linkedin.com/in/jeremiah-soe/">LinkedIn</Link>
             </HStack>
           </HStack>
         </VStack>

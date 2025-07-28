@@ -5,7 +5,7 @@ const ResumeModal = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <Button variant="outline">
+        <Button variant="surface">
           <FaFilePdf />
           View Resume
         </Button>

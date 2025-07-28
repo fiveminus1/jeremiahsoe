@@ -28,10 +28,6 @@ const Hero = () => {
     <Box 
       id="hero" 
       w="100%"
-      bgImage="url('/hero-bg.jpg')"
-      bgPos="center top"
-      bgSize="cover"
-      bgRepeat="no-repeat"
       display="flex" 
     >
       <Container
@@ -77,14 +73,9 @@ const Hero = () => {
                 transition={{ duration: 0.15, ease: "easeInOut" }}
               >
                 <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
-                  <Highlight
-                    query={["Computer Science"]}
-                    styles={{ bg: "accentDark" }}
-                  >
-                    Full-stack software engineer studying Computer Science at the 
-                  </Highlight>
+                  Full-stack software engineer studying Computer Science at the 
                   {" "}
-                  <Link href="https://uci.edu" color="textDark">
+                  <Link href="https://uci.edu" color="#60a5fa">
                     University of California, Irvine.
                   </Link>                
                 </Text>
