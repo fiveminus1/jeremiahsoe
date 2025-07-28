@@ -44,6 +44,7 @@ const Hero = () => {
             fontSize={headingSize} 
             fontWeight="bold" 
             lineHeight="short"
+            textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
@@ -75,7 +76,7 @@ const Hero = () => {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.15, ease: "easeInOut" }}
               >
-                <Text fontSize={textSize} mt={2}>
+                <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
                   <Highlight
                     query={["Computer Science"]}
                     styles={{ bg: "accentDark" }}
