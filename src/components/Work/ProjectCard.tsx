@@ -1,6 +1,6 @@
 "use client";
 
-import { Box,Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
+import { Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import { motion } from "framer-motion";
 import { chakra } from "@chakra-ui/react";

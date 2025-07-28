@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Text, Highlight, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Container, Stack, Text, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
 import { AnimatePresence, motion } from "framer-motion";

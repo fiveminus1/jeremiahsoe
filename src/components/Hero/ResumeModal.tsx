@@ -1,4 +1,4 @@
-import { Button, Dialog, Portal, Link } from "@chakra-ui/react";
+import { Button, Dialog, Portal } from "@chakra-ui/react";
 import { FaFilePdf } from "react-icons/fa";
 
 const ResumeModal = () => {

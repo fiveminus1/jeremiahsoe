@@ -4,8 +4,6 @@ import { Box, HStack, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, 
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import type { Project } from "@/types/types";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { FaBriefcase } from "react-icons/fa6";
 
 
