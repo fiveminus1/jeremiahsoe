@@ -1,11 +1,13 @@
 "use client";
 
-import { Box, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, DialogBackdrop, DialogPositioner, DialogContent } from "@chakra-ui/react";
+import { Box, HStack, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, DialogBackdrop, DialogPositioner, DialogContent } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import type { Project } from "@/types/types";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { FaBriefcase } from "react-icons/fa6";
+
 
 const projects: Project[] = [
   {
@@ -50,9 +52,13 @@ const Projects = () => {
           animate={isInView ? { opacity: 1, y: 0 }: {}}
           transition={{duration: 0.6, ease: "easeOut"}}
           >
-          <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
-            Work
-          </Heading>
+
+          <HStack gap={4}>
+            <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
+              Work
+            </Heading>
+            <Box fontSize="2xl" as={FaBriefcase} />
+          </HStack>
 
           <SimpleGrid 
             columns={{ base: 1, md: 2, lg: 3 }} 

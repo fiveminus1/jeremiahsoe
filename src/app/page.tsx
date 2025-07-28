@@ -7,9 +7,11 @@ import Projects from "@/components/Work/Work";
 import Skills from "@/components/Skills/Skills";
 import Footer from "@/components/Footer";
 import About from "@/components/About/About";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
+    
     <Flex 
       direction="column" 
       bgGradient="to-br"
@@ -18,6 +20,7 @@ export default function Home() {
       gradientTo="blue.900"
       color="fg"
     >      
+      <Sidebar /> 
       <Hero />
       <Container maxW="7xl" flex="1" px={{base: 4, md: 8}}>
         <About />

@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, VStack, Heading, Wrap, WrapItem, Box, Icon, Text } from "@chakra-ui/react";
+import { Card, HStack, VStack, Heading, Wrap, WrapItem, Box, Icon, Text } from "@chakra-ui/react";
 import { SiReact, SiNextdotjs, SiPostgresql, SiPython, SiTypescript, SiMongodb } from "react-icons/si";
-import { FaJava, FaAws } from "react-icons/fa";
+import { FaJava, FaAws, FaTools } from "react-icons/fa";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -23,14 +23,18 @@ const Skills = () => {
 
   return (
     <VStack align="stretch" id="skills">
-      <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
-        Skills
-      </Heading>
-
+      <HStack gap={4}>
+        <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
+          Skills
+        </Heading>
+        <Box fontSize="2xl" as={FaTools} />
+      </HStack>
+      
       <Card.Root
         width="100%"
         p={6}
-        borderColor="gray.800"
+        bg="rgba(255, 255, 255, 0.02)"
+        shadow="sm"
       >
         <motion.div
           ref={ref}
@@ -60,8 +64,6 @@ const Skills = () => {
 
           </Wrap>
         </motion.div>
-        
-
       </Card.Root>
     </VStack>
   );
