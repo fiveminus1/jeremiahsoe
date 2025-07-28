@@ -40,58 +40,47 @@ const projects: Project[] = [
 ]
 
 const Projects = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
     <Box id="work" py={12}>
       <VStack align="stretch">
-        <motion.div
-          ref={ref}
-          initial={{opacity: 0, y: 40}}
-          animate={isInView ? { opacity: 1, y: 0 }: {}}
-          transition={{duration: 0.6, ease: "easeOut"}}
-          >
+        <HStack gap={4}>
+          <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
+            Work
+          </Heading>
+          <Box fontSize="2xl" as={FaBriefcase} />
+        </HStack>
 
-          <HStack gap={4}>
-            <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
-              Work
-            </Heading>
-            <Box fontSize="2xl" as={FaBriefcase} />
-          </HStack>
+        <SimpleGrid 
+          columns={{ base: 1, md: 2, lg: 3 }} 
+          columnGap="12" 
+          rowGap="8"
+          justifyItems="start"
+        >
+          {projects.map((project) => (
+            <Dialog.Root scrollBehavior="inside" size="md" key={project.title}>
+              <Dialog.Trigger asChild>
+                <ProjectCard {...project} />
+              </Dialog.Trigger>
 
-          <SimpleGrid 
-            columns={{ base: 1, md: 2, lg: 3 }} 
-            columnGap="12" 
-            rowGap="8"
-            justifyItems="start"
-          >
-            {projects.map((project) => (
-              <Dialog.Root scrollBehavior="inside" size="md" key={project.title}>
-                <Dialog.Trigger asChild>
-                  <ProjectCard {...project} />
-                </Dialog.Trigger>
-
-                <Portal>
-                  <DialogBackdrop />
-                  <DialogPositioner>
-                    <DialogContent w="500px">
-                      <Dialog.Header>
-                        <Dialog.Title>{project.title}</Dialog.Title>
-                        <Dialog.CloseTrigger asChild>
-                          <CloseButton size="sm" />
-                        </Dialog.CloseTrigger>
-                      </Dialog.Header>
-                      <Dialog.Body overflowY="auto" p={0}>
-                        <ProjectModal project={project} />
-                      </Dialog.Body>
-                    </DialogContent>
-                  </DialogPositioner>
-                </Portal>
-              </Dialog.Root>
-            ))}
-          </SimpleGrid>
-        </motion.div>
+              <Portal>
+                <DialogBackdrop />
+                <DialogPositioner>
+                  <DialogContent w="500px">
+                    <Dialog.Header>
+                      <Dialog.Title>{project.title}</Dialog.Title>
+                      <Dialog.CloseTrigger asChild>
+                        <CloseButton size="sm" />
+                      </Dialog.CloseTrigger>
+                    </Dialog.Header>
+                    <Dialog.Body overflowY="auto" p={0}>
+                      <ProjectModal project={project} />
+                    </Dialog.Body>
+                  </DialogContent>
+                </DialogPositioner>
+              </Portal>
+            </Dialog.Root>
+          ))}
+        </SimpleGrid>
       </VStack>
     </Box>
   );
