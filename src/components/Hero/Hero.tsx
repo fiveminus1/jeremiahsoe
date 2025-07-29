@@ -1,14 +1,10 @@
 import { Box, Container, Stack, Text, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
-import { AnimatePresence, motion } from "framer-motion";
-import { chakra } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { MdEmail } from "react-icons/md";
-
-const MotionHeading = motion.create(chakra.h1); 
-const MotionBox = motion.create(Box);
-
+import { MotionBox, MotionHeading } from "../util";
 
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
@@ -75,7 +71,7 @@ const Hero = () => {
                 <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
                   Full-stack software engineer studying Computer Science at the 
                   {" "}
-                  <Link href="https://uci.edu" color="#60a5fa">
+                  <Link href="https://uci.edu" color="link">
                     University of California, Irvine.
                   </Link>                
                 </Text>

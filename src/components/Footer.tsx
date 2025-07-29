@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, Link, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -15,7 +15,12 @@ const Footer = () => {
         gap={4}
       >
         <VStack align={{base: "center", md: "flex-end"}} textAlign={{base: "center", md: "right"}}>
-          <Text fontSize="md">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. </Text>
+          <Text fontSize="md">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. 
+            Built with {' '}
+            <Link href="" color="#11c1aa">Chakra UI</Link>,{' '} 
+            <Link href="" color="white">Next.js</Link>, and{' '}
+            <Link href="" color="#f6ee29">Motion</Link>.
+          </Text>
         </VStack>
       </Flex>
     </Box>

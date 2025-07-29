@@ -3,6 +3,7 @@
 import { Card, HStack, VStack, Heading, Wrap, WrapItem, Box, Icon, Text } from "@chakra-ui/react";
 import { SiReact, SiNextdotjs, SiPostgresql, SiPython, SiTypescript, SiMongodb } from "react-icons/si";
 import { FaJava, FaAws, FaTools } from "react-icons/fa";
+import { MotionBox } from "../util";
 
 const skills = [
   { name: "React", icon: SiReact },
@@ -37,17 +38,20 @@ const Skills = () => {
             const SkillIcon = skill.icon;
             return (
               <WrapItem key={skill.name}>
-                <Box
+                <MotionBox
                   display="flex"
                   flexDirection="column"
                   alignItems="center"
                   justifyContent="center"
                   p={4}
-                  _hover={{ transform: "scale(1.05)" }}
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  transition={{ duration: 0.1, ease: "easeOut" }}   
                 >
                   <Icon as={SkillIcon} boxSize={10} />
                   <Text mt={2}>{skill.name}</Text>
-                </Box>
+                </MotionBox>
               </WrapItem>
             );
           })}

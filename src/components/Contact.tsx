@@ -25,7 +25,7 @@ const Contact = () => {
             >
               <MdEmail />
             </Icon>
-            <Text fontSize="xl">
+            <Text fontSize="xl" color="link">
               jeremiahjsoe@gmail.com
             </Text>
           </Link>
@@ -37,7 +37,7 @@ const Contact = () => {
             >
               <FaGithub />
             </Icon>
-            <Text fontSize="xl">
+            <Text fontSize="xl" color="link">
               GitHub
             </Text>
           </Link>
@@ -49,7 +49,7 @@ const Contact = () => {
             >
               <FaLinkedin />
             </Icon>
-            <Text fontSize="xl">
+            <Text fontSize="xl" color="link">
               LinkedIn
             </Text>
           </Link>

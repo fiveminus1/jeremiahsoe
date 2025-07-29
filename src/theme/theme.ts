@@ -10,6 +10,7 @@ const config = defineConfig({
         textDark:          { value: "#CCC9DC" },
         accentDark:        { value: "#324A5F" },
         mutedDark:         { value: "#888888" },
+        linkDark: { value: "#60a5fa" },
 
         bgLight:           { value: "#CCC9DC" },
         surfaceLight:      { value: "#ffffff" },
@@ -17,6 +18,7 @@ const config = defineConfig({
         textLight:         { value: "#1B2A41" },
         accentLight:       { value: "#324A5F" },
         mutedLight:        { value: "#666666" },
+        linkLight: { value: "#60a5fa" },
       },
       gradients: {
         cardBgDark: { value: "linear-gradient(to right, var(--chakra-colors-bg-panel), #141a2cff 90%)"}
@@ -86,14 +88,14 @@ const config = defineConfig({
             },
           },
         },
-        raised: {
+        link: {
           DEFAULT: {
             value: {
-              _light: "{colors.raisedLight}",
-              _dark: "{colors.raisedDark}",
+              _light: "{colors.linkLight}",
+              _dark: "{colors.linkDark}",
             }
           }
-        },
+        }
       },
     },
   },
