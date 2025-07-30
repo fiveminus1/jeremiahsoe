@@ -36,7 +36,7 @@ const FlashlightBox = ({ children, ...props }: BoxProps) => {
         left: 0,
         w: "100%",
         h: "100%",
-        background:`radial-gradient(400px at ${pos?.x ?? 0}px ${pos?.y ?? 0}px, rgba(255, 220, 100, 0.1), transparent 80%)`,
+        background:`radial-gradient(400px at ${pos?.x ?? 0}px ${pos?.y ?? 0}px, rgba(255, 220, 100, 0.05), transparent 80%)`,
         opacity: active ? 1 : 0,
         pointerEvents: "none",
         zIndex: 0,
