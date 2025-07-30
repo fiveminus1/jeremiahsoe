@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Container, Stack, Text, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
@@ -5,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { MdEmail } from "react-icons/md";
 import { MotionBox, MotionHeading } from "../util";
+import ParticleBackground from "@/animations/ParticleBackground";
 
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
@@ -26,6 +29,7 @@ const Hero = () => {
       w="100%"
       display="flex" 
     >
+      <ParticleBackground />
       <Container
         maxW="7xl"
         py={{base:24, md:32}}
