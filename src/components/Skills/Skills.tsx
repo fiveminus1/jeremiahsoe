@@ -4,6 +4,7 @@ import { Card, HStack, VStack, Heading, Wrap, WrapItem, Box, Icon, Text } from "
 import { SiReact, SiNextdotjs, SiPostgresql, SiPython, SiTypescript, SiMongodb } from "react-icons/si";
 import { FaJava, FaAws, FaTools } from "react-icons/fa";
 import { MotionBox } from "../util";
+import FlashlightBox from "@/animations/FlashlightBox";
 
 const skills = [
   { name: "React", icon: SiReact },
@@ -26,38 +27,40 @@ const Skills = () => {
         </Heading>
         <Box fontSize="2xl" as={FaTools} />
       </HStack>
-      
-      <Card.Root
-        width="100%"
-        p={6}
-        bg="rgba(255, 255, 255, 0.02)"
-        shadow="sm"
-      >
-        <Wrap justify="center">
-          {skills.map((skill) => {
-            const SkillIcon = skill.icon;
-            return (
-              <WrapItem key={skill.name}>
-                <MotionBox
-                  display="flex"
-                  flexDirection="column"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={4}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  transition={{ duration: 0.1, ease: "easeOut" }}   
-                >
-                  <Icon as={SkillIcon} boxSize={10} />
-                  <Text mt={2}>{skill.name}</Text>
-                </MotionBox>
-              </WrapItem>
-            );
-          })}
+            
+      <FlashlightBox>
+        <Card.Root
+          width="100%"
+          p={6}
+          bg="rgba(255, 255, 255, 0.02)"
+          shadow="sm"
+        >
+          <Wrap justify="center">
+            {skills.map((skill) => {
+              const SkillIcon = skill.icon;
+              return (
+                <WrapItem key={skill.name}>
+                  <MotionBox
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    p={4}
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    transition={{ duration: 0.1, ease: "easeOut" }}   
+                  >
+                    <Icon as={SkillIcon} boxSize={10} />
+                    <Text mt={2}>{skill.name}</Text>
+                  </MotionBox>
+                </WrapItem>
+              );
+            })}
 
-        </Wrap>
-      </Card.Root>
+          </Wrap>
+        </Card.Root>
+      </FlashlightBox>
     </VStack>
   );
 };
