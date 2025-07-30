@@ -18,7 +18,19 @@ const About = () => {
         </HStack>
 
         <Text textStyle="lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          I’m currently a fourth-year undergraduate studying Computer Science at UC Irvine. 
+        </Text>
+        <Text>{" "}</Text>
+        <Text textStyle="lg">
+          At UCI, I&apos;m heavily involved in the ICS Student Council. I work on social media outreach efforts towards the greater ICS community as part of the Public Relations Committee and also contribute to the development of PeterPortal, a widely used course planning tool, as a member of the Projects Committee. I also serve as Secretary, where I write the club’s weekly newsletter.
+        </Text>
+        <Text>{" "}</Text>
+        <Text textStyle="lg">
+          During my time at UCI, I also had the chance to study abroad at Hitotsubashi University. Check out my gallery page (coming soon) for some pictures from my time in Tokyo!
+        </Text>
+        <Text>{" "}</Text>
+        <Text textStyle="lg">
+          Away from my desk, you&apos;ll find me lifting weights, battling a caffeine addiction, hiking, or playing video games (probably in that order). 
         </Text>
       </VStack>
     </Box>
