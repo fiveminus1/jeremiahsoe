@@ -8,6 +8,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { MdEmail } from "react-icons/md";
 import { MotionBox, MotionHeading } from "../util";
 import ParticleBackground from "@/animations/ParticleBackground";
+import Spotlight from "@/animations/Spotlight";
 
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
@@ -29,6 +30,7 @@ const Hero = () => {
       w="100%"
       display="flex" 
     >
+      <Spotlight />
       <ParticleBackground />
       <Container
         maxW="7xl"

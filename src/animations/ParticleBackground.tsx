@@ -1,10 +1,11 @@
 "use client";
 
 import { MotionBox } from "@/components/util";
+import { Particle } from "@/types/types";
 import { Box } from "@chakra-ui/react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 
-const generateParticles = (count: number) =>
+const generateParticles = (count: number): Particle[] =>
   Array.from({ length: count }, (_, i) => ({
     id: i,
     top: Math.random() * 50 + "%",
@@ -18,8 +19,12 @@ const generateParticles = (count: number) =>
 
 
 const ParticleBackground = () => {
-  const particles = useMemo(() => generateParticles(200), []);
-  
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(generateParticles(100));
+  }, []);
+
   return (
     <Box
       position="absolute"
