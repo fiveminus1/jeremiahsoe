@@ -4,7 +4,7 @@ import { Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import { motion } from "framer-motion";
 import { chakra } from "@chakra-ui/react";
-import FlashlightBox from "@/animations/FlashlightBox";
+import Flashlight from "@/animations/Flashlight";
 
 interface ProjectCardProps extends Project {
   onClick?: () => void;
@@ -35,7 +35,7 @@ const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCar
         alt={title}
         flexShrink={0}
       />
-      <FlashlightBox>
+      <Flashlight>
       <Card.Body>
         <VStack align="start">
           <Card.Title>{title}</Card.Title>
@@ -49,7 +49,7 @@ const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCar
           </Wrap>
         </VStack>
       </Card.Body> 
-      </FlashlightBox>
+      </Flashlight>
     </MotionCard >
   )
 };

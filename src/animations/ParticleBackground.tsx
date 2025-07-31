@@ -14,7 +14,7 @@ const generateParticles = (count: number): Particle[] =>
     duration: Math.random() * 10 + 5,
     size: Math.random() * 2 + 1,
     xOffset: Math.random() * 20 - 10,
-    opacity: Math.random() * 0.3 + 0.05,
+    opacity: Math.random() * 0.3 + 0.1,
   }));
 
 

@@ -3,8 +3,6 @@
 import { Box, Container, Stack, Text, HStack, IconButton, Link, useBreakpointValue } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
-import { AnimatePresence } from "framer-motion";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { MdEmail } from "react-icons/md";
 import { MotionBox, MotionHeading } from "../util";
 import ParticleBackground from "@/animations/ParticleBackground";
@@ -13,16 +11,6 @@ import Spotlight from "@/animations/Spotlight";
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
-
-  const [typedText, { isDone }] = useTypewriter({
-    words: [
-      "Full-stack software engineer studying Computer Science at the University of California, Irvine."
-    ],
-    loop: 1,
-    typeSpeed: 20,
-    deleteSpeed: 30,
-    delaySpeed: 1000
-  })
 
   return (
     <Box 
@@ -52,38 +40,21 @@ const Hero = () => {
     
           </MotionHeading>
 
-          <AnimatePresence mode="wait">
-            {!isDone ? (
-              <MotionBox
-                key="typing"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.1, ease: "easeInOut" }}
-              >
-                <Text fontSize={textSize} mt={2}>
-                  {typedText}
-                  <Cursor />
-                </Text>
-              </MotionBox>
-            ) : (
-              <MotionBox 
-                key="highlight"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.15, ease: "easeInOut" }}
-              >
-                <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
-                  Full-stack software engineer studying Computer Science at the 
-                  {" "}
-                  <Link href="https://uci.edu" color="link">
-                    University of California, Irvine.
-                  </Link>                
-                </Text>
-              </MotionBox>
-            )}
-          </AnimatePresence>
+          <MotionBox 
+            key="highlight"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
+          >
+            <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
+              Full-stack software engineer studying Computer Science at the 
+              {" "}
+              <Link href="https://uci.edu" color="link">
+                University of California, Irvine.
+              </Link>                
+            </Text>
+          </MotionBox>
           
           <MotionBox
             initial={{ opacity: 0, y: 10 }}

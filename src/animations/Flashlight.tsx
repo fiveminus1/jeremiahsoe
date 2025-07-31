@@ -3,7 +3,7 @@
 import { Box, BoxProps } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
-const FlashlightBox = ({ children, ...props }: BoxProps) => {
+const Flashlight = ({ children, ...props }: BoxProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ x: number, y: number } | null>({ x: -9999, y: -9999 });
   const [active, setActive] = useState(false);
@@ -36,7 +36,7 @@ const FlashlightBox = ({ children, ...props }: BoxProps) => {
         left: 0,
         w: "100%",
         h: "100%",
-        background:`radial-gradient(400px at ${pos?.x ?? 0}px ${pos?.y ?? 0}px, rgba(255, 220, 100, 0.05), transparent 80%)`,
+        background:`radial-gradient(400px at ${pos?.x ?? 0}px ${pos?.y ?? 0}px, rgba(255, 250, 200, 0.15), transparent 80%)`,
         opacity: active ? 1 : 0,
         pointerEvents: "none",
         zIndex: 0,
@@ -52,4 +52,4 @@ const FlashlightBox = ({ children, ...props }: BoxProps) => {
   );
 };
 
-export default FlashlightBox;
+export default Flashlight;

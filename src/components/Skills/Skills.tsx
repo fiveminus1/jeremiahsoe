@@ -8,7 +8,7 @@ import { SiPython, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiSpringboo
   SiDocker, SiKubernetes, SiGithubactions, } from "react-icons/si";
 import { Tooltip } from "../Tooltip";
 import { MotionBox } from "../util";
-import FlashlightBox from "@/animations/FlashlightBox";
+import Flashlight from "@/animations/Flashlight";
 
 const skills = [
   { name: "Python", icon: SiPython },
@@ -43,7 +43,7 @@ const Skills = () => {
         <Box fontSize="2xl" as={FaTools} />
       </HStack>
             
-      <FlashlightBox>
+      <Flashlight>
         <Card.Root
           width="100%"
           p={6}
@@ -75,7 +75,7 @@ const Skills = () => {
             })}
           </Wrap>
         </Card.Root>
-      </FlashlightBox>
+      </Flashlight>
     </VStack>
   );
 };
