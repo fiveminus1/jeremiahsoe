@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Button, Link, HStack } from "@chakra-ui/react";
+import { Box, Flex, Button, HStack } from "@chakra-ui/react";
 
 const scrollToSection = (sectionId: string) => {
   const section = document.querySelector(sectionId);

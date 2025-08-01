@@ -2,7 +2,11 @@
 
 import { MotionBox } from "@/components/util";
 
-const Spotlight = () => {
+interface SpotlightProps {
+  onComplete?: () => void;
+}
+
+const Spotlight = ({ onComplete }: SpotlightProps) => {
   return (
     <MotionBox
       position="absolute"
@@ -18,12 +22,14 @@ const Spotlight = () => {
 
       initial={{ opacity: 0 }}
       animate={{
-        opacity: [0, 0.4, 0.1, 0.6, 0.3, 0.7, 0.5, 1],
+        opacity: [0, 0.5, 0.3, 1],
         transition: {
-          duration: 1.6,
+          duration: 1.2,
+          times: [0, 0.3, 0.5, 1],
           ease: "easeInOut",
         },
       }}
+      onAnimationComplete={onComplete}
     />
   )
 };

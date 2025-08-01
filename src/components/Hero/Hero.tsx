@@ -7,10 +7,12 @@ import { MdEmail } from "react-icons/md";
 import { MotionBox, MotionHeading } from "../util";
 import ParticleBackground from "@/animations/ParticleBackground";
 import Spotlight from "@/animations/Spotlight";
+import { useState } from "react";
 
 const Hero = () => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
+  const [showParticles, setShowParticles] = useState(false);
 
   return (
     <Box 
@@ -18,8 +20,9 @@ const Hero = () => {
       w="100%"
       display="flex" 
     >
-      <Spotlight />
-      <ParticleBackground />
+      <Spotlight onComplete={() => setShowParticles(true)} />
+      {showParticles && <ParticleBackground />}
+
       <Container
         maxW="7xl"
         py={{base:24, md:32}}
