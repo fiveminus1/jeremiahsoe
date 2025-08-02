@@ -12,7 +12,7 @@ interface ProjectCardProps extends Project {
 
 const MotionCard = motion.create(chakra(Card.Root));
 
-const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCardProps) => {
+const ProjectCard = ({ title, overview, imageSrc, tags, onClick }: ProjectCardProps) => {
   return (
     <MotionCard 
       width="400px" 
@@ -31,24 +31,29 @@ const ProjectCard = ({ title, description, imageSrc, tags, onClick }: ProjectCar
         src={imageSrc}
         height="200px"
         width="400px"
-        objectFit="cover"
+        fit="cover"
+        objectPosition="left"
         alt={title}
         flexShrink={0}
+        bg="gray.950"
       />
       <Flashlight>
-      <Card.Body>
-        <VStack align="start">
-          <Card.Title>{title}</Card.Title>
-          <Card.Description>{description}</Card.Description>
-          <Wrap>
-            {tags.map((tag) => (
-              <Tag.Root key={`${title}-${tag}`}>
-                <Tag.Label>{tag}</Tag.Label>
-              </Tag.Root>
-            ))}
-          </Wrap>
-        </VStack>
-      </Card.Body> 
+        <Card.Body>
+          <VStack align="start">
+            <VStack align="start" gap={2} minH="80px" maxH="80px">
+              <Card.Title>{title}</Card.Title>
+              <Card.Description>{overview}</Card.Description>
+            </VStack>
+            
+            <Wrap pt={2}>
+              {tags.map((tag) => (
+                <Tag.Root key={`${title}-${tag}`}>
+                  <Tag.Label>{tag}</Tag.Label>
+                </Tag.Root>
+              ))}
+            </Wrap>
+          </VStack>
+        </Card.Body> 
       </Flashlight>
     </MotionCard >
   )

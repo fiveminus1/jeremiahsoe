@@ -9,30 +9,33 @@ import { FaBriefcase } from "react-icons/fa6";
 
 const projects: Project[] = [
   {
+    title: "Quote Book Bot",
+    overview: "A simple Discord bot to store ICSSC Board's various quotes",
+    description: "Blah blah blah..." ,
+    imageSrc: 
+      "/quote-bot.png",
+    tags: [
+      "Rust", "Docker", "PostgreSQL", "AWS", "Github Actions", "Notion API",
+    ],
+  },
+  {
     title: "Fabflix",
+    overview: "CS 122B's quarter-long project: a full-stack multiservice architecture movie browsing website",
     description: "Blah blah blah..." ,
-    imageSrc: //todo: update hosting and image
-      "/project_temp.jpeg",
+    imageSrc: 
+      "/fabflix.png",
     tags: [
-      "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
+      "Java", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
   },
   {
-    title: "Fabflix2",
+    title: "Sprite Type",
+    overview: "A cozy Studio Ghibli-themed typing game built for IrvineHacks 2025 featuring custom sprites ",
     description: "Blah blah blah..." ,
-    imageSrc: //todo: update hosting and image
-      "/project_temp.jpeg",
+    imageSrc: 
+      "/spritetype.png",
     tags: [
-      "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
-    ],
-  },
-  {
-    title: "Fabflix3",
-    description: "Blah blah blah..." ,
-    imageSrc: //todo: update hosting and image
-      "/project_temp.jpeg",
-    tags: [
-      "HTML", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
+      "React", "Next.js", "MongoDB", "Tailwind CSS"
     ],
   },
 ]

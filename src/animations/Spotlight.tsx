@@ -15,7 +15,7 @@ const Spotlight = ({ onComplete }: SpotlightProps) => {
       w="100%"
       h="100%"
       zIndex={1}
-      bg="radial-gradient(ellipse 100% 30% at top center, rgba(255, 250, 200, 0.3) 0%, transparent 80%)"
+      bg="radial-gradient(ellipse 100% 30% at top center, rgba(255, 250, 200, 0.2) 0%, transparent 80%)"
       filter="blur(12px)"
       mixBlendMode="screen"
       pointerEvents="none"

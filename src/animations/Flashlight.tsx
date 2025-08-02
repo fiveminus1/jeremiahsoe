@@ -29,6 +29,7 @@ const Flashlight = ({ children, ...props }: BoxProps) => {
       onMouseLeave={handleMouseLeave}
       position="relative"
       overflow="hidden"
+      flex="1"
       _before={{
         content: `""`,
         position: "absolute",
