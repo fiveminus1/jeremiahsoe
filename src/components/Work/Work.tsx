@@ -13,7 +13,7 @@ const projects: Project[] = [
     overview: "A simple Discord bot to store ICSSC Board's various quotes",
     description: "Blah blah blah..." ,
     imageSrc: 
-      "/quote-bot.png",
+      "./quote-bot.png",
     tags: [
       "Rust", "Docker", "PostgreSQL", "AWS", "Github Actions", "Notion API",
     ],
@@ -23,7 +23,7 @@ const projects: Project[] = [
     overview: "CS 122B's quarter-long project: a full-stack multiservice architecture movie browsing website",
     description: "Blah blah blah..." ,
     imageSrc: 
-      "/fabflix.png",
+      "./fabflix.png",
     tags: [
       "Java", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
@@ -33,7 +33,7 @@ const projects: Project[] = [
     overview: "A cozy Studio Ghibli-themed typing game built for IrvineHacks 2025 featuring custom sprites ",
     description: "Blah blah blah..." ,
     imageSrc: 
-      "/spritetype.png",
+      "./spritetype.png",
     tags: [
       "React", "Next.js", "MongoDB", "Tailwind CSS"
     ],
