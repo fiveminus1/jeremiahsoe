@@ -31,15 +31,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 10
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm"
+          
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+      
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -48,19 +67,11 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-      - name: Install dependencies
-        run: pnpm install
+
       - name: Build with Next.js
-        run: pnpm exec next build
+        run: pnpm next build
       - name: Export static site
-        run: pnpm exec next export
+        run: pnpm next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
