@@ -17,6 +17,7 @@ const projects: Project[] = [
     tags: [
       "Rust", "Docker", "PostgreSQL", "AWS", "Github Actions", "Notion API",
     ],
+    githubUrl: "https://github.com/fiveminus1/quote-bot",
   },
   {
     title: "Fabflix",
@@ -27,6 +28,7 @@ const projects: Project[] = [
     tags: [
       "Java", "CSS", "JavaScript", "MySQL", "Apache Tomcat", "AWS", "GCP", "Docker", "Kubernetes",
     ],
+    link: "https://youtu.be/MhOHizmFNnI",
   },
   {
     title: "Sprite Type",
@@ -37,6 +39,8 @@ const projects: Project[] = [
     tags: [
       "React", "Next.js", "MongoDB", "Tailwind CSS"
     ],
+    githubUrl: "https://github.com/fiveminus1/SpriteType",
+    link: "https://sprite-type.vercel.app/",
   },
 ]
 

@@ -1,10 +1,12 @@
 "use client";
 
-import { Card, Image, Wrap, VStack, Tag } from "@chakra-ui/react";
+import { Card, Image, Wrap, VStack, Tag, Link, IconButton, HStack } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import { motion } from "framer-motion";
 import { chakra } from "@chakra-ui/react";
 import Flashlight from "@/animations/Flashlight";
+import { FaGithub } from "react-icons/fa6";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 interface ProjectCardProps extends Project {
   onClick?: () => void;
@@ -12,7 +14,7 @@ interface ProjectCardProps extends Project {
 
 const MotionCard = motion.create(chakra(Card.Root));
 
-const ProjectCard = ({ title, overview, imageSrc, tags, onClick }: ProjectCardProps) => {
+const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link }: ProjectCardProps) => {
   return (
     <MotionCard 
       width="400px" 
@@ -41,7 +43,25 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick }: ProjectCardPr
         <Card.Body>
           <VStack align="start">
             <VStack align="start" gap={2} minH="80px" maxH="80px">
-              <Card.Title>{title}</Card.Title>
+              <HStack gap={1}>
+                <Card.Title>{title}</Card.Title>
+                <HStack gap={0}>
+                  {link && (
+                    <Link href={link}>
+                      <IconButton variant="ghost" size="xs" >
+                        <FaExternalLinkSquareAlt />
+                      </IconButton>
+                    </Link>
+                  )}
+                  {githubUrl && (
+                    <Link href={githubUrl}>
+                      <IconButton variant="ghost" size="xs" >
+                        <FaGithub />
+                      </IconButton>
+                    </Link>
+                  )}
+                </HStack>
+              </HStack>
               <Card.Description color="muted">{overview}</Card.Description>
             </VStack>
             

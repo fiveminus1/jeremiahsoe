@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   imageSrc: string;
   tags: string[];
+  githubUrl?: string;
+  link?: string;
 }
 
 export type Particle = {
