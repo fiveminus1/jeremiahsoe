@@ -1,11 +1,9 @@
 "use client";
-import { ClientOnly, Flex, IconButton, Separator } from "@chakra-ui/react";
-import { FaMoon, FaSun, FaPhone, FaUser, FaBriefcase } from "react-icons/fa6";
+import { Flex, IconButton, Separator } from "@chakra-ui/react";
+import { FaPhone, FaUser, FaBriefcase, FaPowerOff } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
-import { useColorMode } from "./ui/color-mode";
 
 const Sidebar = () => {
-  const { toggleColorMode, colorMode} = useColorMode()
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -48,13 +46,11 @@ const Sidebar = () => {
       
 
     
-      <ClientOnly>
-        <Separator />
+      <Separator />
 
-        <IconButton variant="ghost" onClick={toggleColorMode}>
-          {colorMode === 'light' ? <FaMoon /> : <FaSun />}
-        </IconButton>
-      </ClientOnly>
+      <IconButton variant="ghost" onClick={() => scrollToSection("contact")}>
+        <FaPowerOff />
+      </IconButton>
 
       
 

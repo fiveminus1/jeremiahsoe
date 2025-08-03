@@ -50,6 +50,7 @@ const Skills = () => {
           bg="rgba(255, 255, 255, 0.03)"
           shadow="sm"
           justifyContent="center"
+          border="border"
         >
           <Wrap justify="center">
             {skills.map((skill) => {

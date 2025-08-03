@@ -42,7 +42,7 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick }: ProjectCardPr
           <VStack align="start">
             <VStack align="start" gap={2} minH="80px" maxH="80px">
               <Card.Title>{title}</Card.Title>
-              <Card.Description>{overview}</Card.Description>
+              <Card.Description color="muted">{overview}</Card.Description>
             </VStack>
             
             <Wrap pt={2}>
