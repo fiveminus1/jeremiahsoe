@@ -22,7 +22,7 @@ const ResumeModal = () => {
           >
             <Dialog.Body p={0} h="full">
               <iframe 
-                src="/resume.pdf" 
+                src="./resume.pdf" 
                 title="Resume PDF"
                 width="100%"
                 height="100%"

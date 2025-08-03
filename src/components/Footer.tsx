@@ -17,9 +17,9 @@ const Footer = () => {
         <VStack align={{base: "center", md: "flex-end"}} textAlign={{base: "center", md: "right"}}>
           <Text fontSize="md">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. 
             Built with {' '}
-            <Link href="" color="#11c1aa">Chakra UI</Link>,{' '} 
-            <Link href="" color="white">Next.js</Link>, and{' '}
-            <Link href="" color="#f6ee29">Motion</Link>.
+            <Link href="https://chakra-ui.com/" color="link">Chakra UI</Link>,{' '} 
+            <Link href="https://nextjs.org/" color="link">Next.js</Link>, and{' '}
+            <Link href="https://motion.dev/" color="link">Motion</Link>.
           </Text>
         </VStack>
       </Flex>

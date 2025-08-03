@@ -24,7 +24,7 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick }: ProjectCardPr
         boxShadow: "0px 16px 24px rgba(0, 0, 0, 0.15)",
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}      
-      bgGradient="cardBgDark"
+      bgGradient="card"
       borderColor="gray.800"
     > 
       <Image

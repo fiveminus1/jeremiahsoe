@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Heading, VStack, Text, HStack } from "@chakra-ui/react";
+import { Box, Heading, VStack, Text, HStack, Link } from "@chakra-ui/react";
 import { FaUser } from "react-icons/fa";
 
 const About = () => {
@@ -22,9 +22,10 @@ const About = () => {
         </Text>
         <Text>{" "}</Text>
         <Text textStyle="lg">
-          At UCI, I&apos;m heavily involved in the ICS Student Council. I work on social media and outreach efforts towards the greater ICS community as part of the Public Relations Committee. 
-          As a member of the Projects Committee, I contribute to a widely used course planning app, PeterPortal. 
-          I also write the club’s weekly newsletter.
+          At UCI, I&apos;m heavily involved in the <Link color="link" href="https://studentcouncil.ics.uci.edu/">ICS Student Council</Link>. 
+          I work on <Link color="link" href="https://www.instagram.com/icssc.uci/">social media and outreach efforts</Link> towards the greater ICS community as part of the Public Relations Committee. 
+          As a member of the Projects Committee, I contribute to a widely used course planning app, <Link color="link" href="https://peterportal.org/">PeterPortal</Link>. 
+          I also write the club’s <Link color="link" href="https://icssc.link/ICSSCNewsletter">weekly newsletter</Link>.
         </Text>
         <Text>{" "}</Text>
         <Text textStyle="lg">

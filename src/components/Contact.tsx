@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 const Contact = () => {
   return (
     <Box
-      id="about"
+      id="contact"
     >
       <VStack align="stretch">
         <HStack gap={4}>

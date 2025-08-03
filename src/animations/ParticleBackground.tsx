@@ -22,7 +22,7 @@ const ParticleBackground = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    setParticles(generateParticles(100));
+    setParticles(generateParticles(50));
   }, []);
 
   return (

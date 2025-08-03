@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     title: "Sprite Type",
-    overview: "A cozy Studio Ghibli-themed typing game built for IrvineHacks 2025 featuring custom sprites ",
+    overview: "A cozy Studio Ghibli-themed typing game built for IrvineHacks 2025 featuring animated custom sprites ",
     description: "Blah blah blah..." ,
     imageSrc: 
       "./spritetype.png",

@@ -11,14 +11,9 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    
     <Flex 
       direction="column" 
-      bgGradient="to-br"
-      gradientFrom="gray.950"
-      gradientVia="blue.950"
-      gradientTo="blue.900"
-      color="fg"
+      bgGradient="bg"
     >      
       <Sidebar /> 
       <Hero />

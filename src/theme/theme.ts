@@ -4,7 +4,6 @@ const config = defineConfig({
   theme: {
     tokens: {
       colors: {
-        bgDark:            { value: "#000000" },
         surfaceDark:       { value: "#0C1821" },
         surfaceElevatedDark: { value: "#1B2A41" },
         textDark:          { value: "#CCC9DC" },
@@ -12,16 +11,19 @@ const config = defineConfig({
         mutedDark:         { value: "#888888" },
         linkDark: { value: "#60a5fa" },
 
-        bgLight:           { value: "#CCC9DC" },
         surfaceLight:      { value: "#ffffff" },
         surfaceElevatedLight: { value: "#f0f0f5" },
         textLight:         { value: "#1B2A41" },
         accentLight:       { value: "#324A5F" },
         mutedLight:        { value: "#666666" },
-        linkLight: { value: "#60a5fa" },
+        linkLight: { value: "#4497fdff" },
       },
       gradients: {
-        cardBgDark: { value: "linear-gradient(to right, var(--chakra-colors-bg-panel), #141a2cff 90%)"}
+        bgDark: { value: "linear-gradient(to bottom right, var(--chakra-colors-gray-950), var(--chakra-colors-blue-950), var(--chakra-colors-blue-900))"},
+        cardDark: { value: "linear-gradient(to right, var(--chakra-colors-bg-panel), #141a2cff 90%)"},
+
+        bgLight: { value: "linear-gradient(to bottom right, var(--chakra-colors-gray-600), var(--chakra-colors-gray-500))"},
+        cardLight: { value: "linear-gradient(to right, var(--chakra-colors-gray-300))"}
       },
       fonts: {
         heading: { value: "var(--font-inter)" },
@@ -30,14 +32,6 @@ const config = defineConfig({
     },
     semanticTokens: {
       colors: {
-        bg: {
-          DEFAULT: {
-            value: {
-              _light: "{colors.bgLight}",
-              _dark: "{colors.bgDark}",
-            },
-          },
-        },
         surface: {
           DEFAULT: {
             value: {
@@ -95,8 +89,35 @@ const config = defineConfig({
               _dark: "{colors.linkDark}",
             }
           }
+        },
+        text: {
+          DEFAULT: {
+            value: {
+              _light: "{colors.textLight}",
+              _dark: "{colors.textDark}",
+            }
+          }
         }
       },
+      gradients: {
+        bg: {
+          DEFAULT: {
+            value: {
+              _light: "{gradients.bgLight}",
+              _dark: "{gradients.bgDark}",
+
+            }
+          }
+        },
+        card: {
+          DEFAULT: {
+            value: {
+              _light: "{gradients.cardLight}",
+              _dark: "{gradients.cardDark}",
+            }
+          }
+        }
+      }
     },
   },
 });
