@@ -3,8 +3,7 @@ import { Flex, IconButton, Separator } from "@chakra-ui/react";
 import { FaPhone, FaUser, FaBriefcase, FaPowerOff } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
 
-const Sidebar = () => {
-
+const Sidebar = ({ toggleSpotlight }: { toggleSpotlight: () => void }) => {
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if(el){
@@ -44,11 +43,9 @@ const Sidebar = () => {
         <FaPhone />
       </IconButton>
       
-
-    
       <Separator />
 
-      <IconButton variant="ghost" onClick={() => scrollToSection("contact")}>
+      <IconButton variant="ghost" onClick={toggleSpotlight}>
         <FaPowerOff />
       </IconButton>
 

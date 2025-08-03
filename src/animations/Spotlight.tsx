@@ -3,10 +3,11 @@
 import { MotionBox } from "@/components/util";
 
 interface SpotlightProps {
+  isOn: boolean;
   onComplete?: () => void;
 }
 
-const Spotlight = ({ onComplete }: SpotlightProps) => {
+const Spotlight = ({ isOn, onComplete }: SpotlightProps) => {
   return (
     <MotionBox
       position="absolute"
@@ -21,17 +22,22 @@ const Spotlight = ({ onComplete }: SpotlightProps) => {
       pointerEvents="none"
 
       initial={{ opacity: 0 }}
-      animate={{
-        opacity: [0, 0.5, 0.3, 1],
-        transition: {
-          duration: 1.2,
-          times: [0, 0.3, 0.5, 1],
-          ease: "easeInOut",
-        },
-      }}
+      animate={
+        isOn ? {
+          opacity: [0, 0.5, 0.3, 1],
+          transition: {
+            duration: 1.2,
+            times: [0, 0.3, 0.5, 1],
+            ease: "easeInOut",
+          },
+        } : {
+          opacity: 0,
+          transition: { duration: 0.6, ease: "easeOut" },
+        }
+      }
       onAnimationComplete={onComplete}
     />
-  )
+  );
 };
 
 export default Spotlight;

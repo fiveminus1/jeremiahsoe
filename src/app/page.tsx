@@ -8,15 +8,18 @@ import Footer from "@/components/Footer";
 import About from "@/components/About/About";
 import Sidebar from "@/components/Sidebar";
 import Contact from "@/components/Contact";
+import { useState } from "react";
 
 export default function Home() {
+  const [spotlightOn, setSpotlightOn] = useState(true);
+  
   return (
     <Flex 
       direction="column" 
       bgGradient="bg"
     >      
-      <Sidebar /> 
-      <Hero />
+      <Sidebar toggleSpotlight={() => setSpotlightOn((prev) => !prev)}/> 
+      <Hero spotlightOn={spotlightOn} />
       <Container maxW="7xl" flex="1" px={{base: 4, md: 8}}>
         <About />
         <Skills />

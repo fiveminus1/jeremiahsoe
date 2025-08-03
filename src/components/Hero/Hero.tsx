@@ -9,7 +9,7 @@ import ParticleBackground from "@/animations/ParticleBackground";
 import Spotlight from "@/animations/Spotlight";
 import { useState } from "react";
 
-const Hero = () => {
+const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
   const [showParticles, setShowParticles] = useState(false);
@@ -20,8 +20,8 @@ const Hero = () => {
       w="100%"
       display="flex" 
     >
-      <Spotlight onComplete={() => setShowParticles(true)} />
-      {showParticles && <ParticleBackground />}
+      <Spotlight isOn={spotlightOn} onComplete={() => setShowParticles(true)} />
+      {spotlightOn && showParticles && <ParticleBackground />}
 
       <Container
         maxW="7xl"
