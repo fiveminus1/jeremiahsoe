@@ -1,11 +1,11 @@
-import { Image, Text, VStack, Wrap, Tag } from "@chakra-ui/react";
+import { Image, Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 
 interface ProjectModalProps {
   project: Project;
 }
 
-const ProjectModal = ({ project }: ProjectModalProps) => {
+const ModalContent = ({ project }: ProjectModalProps) => {
   return (
     <>
       <Image src={project.imageSrc} alt={project.title} width="100%" />
@@ -19,6 +19,29 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
           ))}
         </Wrap>
       </VStack>
+    </>
+  );
+};
+
+const ProjectModal = ({ project }: ProjectModalProps) => {
+  return (
+    <>
+      <Portal>
+        <DialogBackdrop />
+        <DialogPositioner>
+          <DialogContent w="500px">
+            <Dialog.Header>
+              <Dialog.Title>{project.title}</Dialog.Title>
+              <Dialog.CloseTrigger asChild>
+                <CloseButton size="sm" />
+              </Dialog.CloseTrigger>
+            </Dialog.Header>
+            <Dialog.Body overflowY="auto" p={0}>
+              <ModalContent project={project} />
+            </Dialog.Body>
+          </DialogContent>
+        </DialogPositioner>
+      </Portal>
     </>
   );
 }

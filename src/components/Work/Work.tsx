@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, HStack, CloseButton, Heading, VStack, SimpleGrid, Dialog, Portal, DialogBackdrop, DialogPositioner, DialogContent } from "@chakra-ui/react";
+import { Box, HStack, Heading, VStack, SimpleGrid, Dialog } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import type { Project } from "@/types/types";
@@ -67,22 +67,7 @@ const Projects = () => {
                 <ProjectCard {...project} />
               </Dialog.Trigger>
 
-              <Portal>
-                <DialogBackdrop />
-                <DialogPositioner>
-                  <DialogContent w="500px">
-                    <Dialog.Header>
-                      <Dialog.Title>{project.title}</Dialog.Title>
-                      <Dialog.CloseTrigger asChild>
-                        <CloseButton size="sm" />
-                      </Dialog.CloseTrigger>
-                    </Dialog.Header>
-                    <Dialog.Body overflowY="auto" p={0}>
-                      <ProjectModal project={project} />
-                    </Dialog.Body>
-                  </DialogContent>
-                </DialogPositioner>
-              </Portal>
+              <ProjectModal project={project} />
             </Dialog.Root>
           ))}
         </SimpleGrid>
