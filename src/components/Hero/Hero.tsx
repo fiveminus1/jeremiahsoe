@@ -5,14 +5,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeModal from "./ResumeModal";
 import { MdEmail } from "react-icons/md";
 import { MotionBox, MotionHeading } from "../util";
-import ParticleBackground from "@/animations/ParticleBackground";
 import Spotlight from "@/animations/Spotlight";
-import { useState } from "react";
 
 const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
   const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
   const textSize = useBreakpointValue({base: "md", md: "lg"});
-  const [showParticles, setShowParticles] = useState(false);
 
   return (
     <Box 
@@ -20,8 +17,7 @@ const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
       w="100%"
       display="flex" 
     >
-      <Spotlight isOn={spotlightOn} onComplete={() => setShowParticles(true)} />
-      {spotlightOn && showParticles && <ParticleBackground />}
+      <Spotlight isOn={spotlightOn} />
 
       <Container
         maxW="7xl"
@@ -34,10 +30,6 @@ const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
             fontWeight="bold" 
             lineHeight="short"
             textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)"
-            // initial={{ opacity: 0, y: 20 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // exit={{ opacity: 0 }}
-            // transition={{ duration: 0.15, ease: "easeInOut" }}
           >
             Jeremiah Soe
     

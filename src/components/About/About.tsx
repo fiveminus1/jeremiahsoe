@@ -16,7 +16,7 @@ const About = () => {
         </HStack>
 
         <Text textStyle="lg">
-          I&apos;m a software engineer with experience across the stack, particularly in web development. Currently, I&apos;m in my fourth year studying Computer Science at UC Irvine. 
+          I&apos;m a software engineer with experience across the stack. Currently, I&apos;m in my fourth year studying Computer Science at UC Irvine. 
         </Text>
         <Text>{" "}</Text>
         <Text textStyle="lg">
