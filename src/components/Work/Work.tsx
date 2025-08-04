@@ -1,7 +1,6 @@
 "use client";
 
-import { Box, HStack, Heading, VStack, SimpleGrid, Dialog } from "@chakra-ui/react";
-import ProjectCard from "./ProjectCard";
+import { Box, HStack, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
 import ProjectModal from "./ProjectModal";
 import type { Project } from "@/types/types";
 import { FaBriefcase } from "react-icons/fa6";
@@ -62,13 +61,7 @@ const Projects = () => {
           justifyItems="start"
         >
           {projects.map((project) => (
-            <Dialog.Root scrollBehavior="inside" size="md" key={project.title}>
-              <Dialog.Trigger asChild>
-                <ProjectCard {...project} />
-              </Dialog.Trigger>
-
-              <ProjectModal project={project} />
-            </Dialog.Root>
+            <ProjectModal project={project} key={project.title}/>
           ))}
         </SimpleGrid>
       </VStack>

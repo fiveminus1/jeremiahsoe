@@ -1,5 +1,6 @@
 import { Image, Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
+import ProjectCard from "./ProjectCard";
 
 interface ProjectModalProps {
   project: Project;
@@ -8,17 +9,27 @@ interface ProjectModalProps {
 const ModalContent = ({ project }: ProjectModalProps) => {
   return (
     <>
-      <Image src={project.imageSrc} alt={project.title} width="100%" />
-      <VStack align="start" p={6}>
-        <Text>{project.description}</Text>
-        <Wrap>
-          {project.tags.map((tag) => (
-            <Tag.Root key={`${project.title}-${tag}`}>
-              <Tag.Label>{tag}</Tag.Label>
-            </Tag.Root>
-          ))}
-        </Wrap>
-      </VStack>
+      <Dialog.Header>
+        <Dialog.Title>
+          {project.title}
+          <Wrap pt={2}>  
+            {project.tags.map((tag) => (
+              <Tag.Root colorPalette="blue" key={`${project.title}-${tag}`}>
+                <Tag.Label>{tag}</Tag.Label>
+              </Tag.Root>
+            ))}
+          </Wrap>
+        </Dialog.Title>
+        <Dialog.CloseTrigger asChild>
+          <CloseButton size="sm" />
+        </Dialog.CloseTrigger>
+      </Dialog.Header>
+      <Dialog.Body overflowY="auto" p={0}>
+        <Image src={project.imageSrc} alt={project.title} />
+        <VStack align="start" p={6}>
+          <Text>{project.description}</Text>
+        </VStack>
+      </Dialog.Body>
     </>
   );
 };
@@ -26,22 +37,20 @@ const ModalContent = ({ project }: ProjectModalProps) => {
 const ProjectModal = ({ project }: ProjectModalProps) => {
   return (
     <>
-      <Portal>
-        <DialogBackdrop />
-        <DialogPositioner>
-          <DialogContent w="500px">
-            <Dialog.Header>
-              <Dialog.Title>{project.title}</Dialog.Title>
-              <Dialog.CloseTrigger asChild>
-                <CloseButton size="sm" />
-              </Dialog.CloseTrigger>
-            </Dialog.Header>
-            <Dialog.Body overflowY="auto" p={0}>
+      <Dialog.Root scrollBehavior="inside" size="lg">
+        <Dialog.Trigger asChild>
+          <ProjectCard {...project} />
+        </Dialog.Trigger>
+
+        <Portal>
+          <DialogBackdrop />
+          <DialogPositioner>
+            <DialogContent>
               <ModalContent project={project} />
-            </Dialog.Body>
-          </DialogContent>
-        </DialogPositioner>
-      </Portal>
+            </DialogContent>
+          </DialogPositioner>
+        </Portal>
+      </Dialog.Root>
     </>
   );
 }

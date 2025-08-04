@@ -67,7 +67,7 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link
             
             <Wrap pt={2}>
               {tags.map((tag) => (
-                <Tag.Root key={`${title}-${tag}`}>
+                <Tag.Root colorPalette="blue" key={`${title}-${tag}`}>
                   <Tag.Label>{tag}</Tag.Label>
                 </Tag.Root>
               ))}
