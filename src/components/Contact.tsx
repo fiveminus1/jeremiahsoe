@@ -17,7 +17,7 @@ const Contact = () => {
         </HStack>
 
         <VStack align="start">
-          <Link href="mailto:jeremiahjsoe@gmail.com">
+          <Link href="mailto:js@jeremiahjsoe.com">
             <Icon 
               aria-label="Email"
               size="lg"
@@ -25,7 +25,7 @@ const Contact = () => {
               <MdEmail />
             </Icon>
             <Text fontSize="xl" color="link">
-              jeremiahjsoe@gmail.com
+              js@jeremiahjsoe.com
             </Text>
           </Link>
 

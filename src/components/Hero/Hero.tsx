@@ -8,8 +8,8 @@ import { MotionBox, MotionHeading } from "../util";
 import Spotlight from "@/animations/Spotlight";
 
 const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
-  const headingSize = useBreakpointValue({base: "3xl", md: "4xl", lg: "6xl"});
-  const textSize = useBreakpointValue({base: "md", md: "lg"});
+  const headingSize = useBreakpointValue({base: "5xl", md: "4xl", lg: "6xl"});
+  const textSize = useBreakpointValue({ base: "md", md: "lg"});
 
   return (
     <Box 

@@ -53,7 +53,7 @@ const Projects = () => {
         </HStack>
         
           <SimpleGrid 
-            minChildWidth="sm"
+            minChildWidth="200px"
             gap="12px"
           >
             {projects.map((project) => (

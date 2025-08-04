@@ -17,8 +17,6 @@ const MotionCard = motion.create(chakra(Card.Root));
 const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link }: ProjectCardProps) => {
   return (
     <MotionCard 
-      // maxW="400px"
-      // w="full" 
       mx="auto"
       onClick={onClick} 
       cursor="pointer" 
@@ -44,7 +42,7 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link
       <Flashlight>
         <Card.Body>
           <VStack align="start">
-            <VStack align="start" gap={2} minH="80px" maxH="80px">
+            <VStack align="start" gap={2}>
               <HStack gap={1}>
                 <Card.Title>
                   {title}
