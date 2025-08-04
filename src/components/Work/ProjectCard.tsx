@@ -17,7 +17,9 @@ const MotionCard = motion.create(chakra(Card.Root));
 const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link }: ProjectCardProps) => {
   return (
     <MotionCard 
-      width="400px" 
+      // maxW="400px"
+      // w="full" 
+      mx="auto"
       onClick={onClick} 
       cursor="pointer" 
       whileHover={{
@@ -31,8 +33,8 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link
     > 
       <Image
         src={imageSrc}
-        height="200px"
-        width="400px"
+        h="200px"
+        w="full"
         fit="cover"
         objectPosition="left"
         alt={title}
@@ -44,7 +46,9 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link
           <VStack align="start">
             <VStack align="start" gap={2} minH="80px" maxH="80px">
               <HStack gap={1}>
-                <Card.Title>{title}</Card.Title>
+                <Card.Title>
+                  {title}
+                </Card.Title>
                 <HStack gap={0}>
                   {link && (
                     <Link href={link}>

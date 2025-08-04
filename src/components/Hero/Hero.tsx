@@ -34,21 +34,17 @@ const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
             fontWeight="bold" 
             lineHeight="short"
             textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
+            // initial={{ opacity: 0, y: 20 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // exit={{ opacity: 0 }}
+            // transition={{ duration: 0.15, ease: "easeInOut" }}
           >
             Jeremiah Soe
     
           </MotionHeading>
 
-          <MotionBox 
+          <Box 
             key="highlight"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
           >
             <Text fontSize={textSize} mt={2} textShadow="2px 2px 8px rgba(0, 0, 0, 0.8)">
               Full-stack software engineer studying Computer Science at the 
@@ -57,7 +53,7 @@ const Hero = ({ spotlightOn }: { spotlightOn: boolean }) => {
                 University of California, Irvine.
               </Link>                
             </Text>
-          </MotionBox>
+          </Box>
           
           <MotionBox
             initial={{ opacity: 0, y: 10 }}

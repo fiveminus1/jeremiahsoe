@@ -15,7 +15,7 @@ const Footer = () => {
         gap={4}
       >
         <VStack align={{base: "center", md: "flex-end"}} textAlign={{base: "center", md: "right"}}>
-          <Text fontSize="md">Copyright {new Date().getFullYear()} (c) Jeremiah Soe. 
+          <Text fontSize="md">Copyright (c) {new Date().getFullYear()}  Jeremiah Soe. 
             Built with {' '}
             <Link href="https://chakra-ui.com/" color="link">Chakra UI</Link>,{' '} 
             <Link href="https://nextjs.org/" color="link">Next.js</Link>, and{' '}

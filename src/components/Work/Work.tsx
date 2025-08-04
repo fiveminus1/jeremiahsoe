@@ -3,7 +3,6 @@
 import { Box, HStack, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
 import ProjectModal from "./ProjectModal";
 import type { Project } from "@/types/types";
-import { FaBriefcase } from "react-icons/fa6";
 
 
 const projects: Project[] = [
@@ -51,19 +50,16 @@ const Projects = () => {
           <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
             Work
           </Heading>
-          <Box fontSize="2xl" as={FaBriefcase} />
         </HStack>
-
-        <SimpleGrid 
-          columns={{ base: 1, md: 2, lg: 3 }} 
-          columnGap="12" 
-          rowGap="8"
-          justifyItems="start"
-        >
-          {projects.map((project) => (
-            <ProjectModal project={project} key={project.title}/>
-          ))}
-        </SimpleGrid>
+        
+          <SimpleGrid 
+            minChildWidth="sm"
+            gap="12px"
+          >
+            {projects.map((project) => (
+              <ProjectModal project={project} key={project.title}/>
+            ))}
+          </SimpleGrid>
       </VStack>
     </Box>
   );

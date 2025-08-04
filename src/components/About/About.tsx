@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Heading, VStack, Text, HStack, Link } from "@chakra-ui/react";
-import { FaUser } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -14,7 +13,6 @@ const About = () => {
           <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
           About me
           </Heading>
-          <Box fontSize="2xl" as={FaUser} />
         </HStack>
 
         <Text textStyle="lg">

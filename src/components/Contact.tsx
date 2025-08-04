@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Heading, VStack, HStack, Link, Text, Icon } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
@@ -14,7 +14,6 @@ const Contact = () => {
           <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
           Contact
           </Heading>
-          <Box fontSize="2xl" as={FaPhone} />
         </HStack>
 
         <VStack align="start">

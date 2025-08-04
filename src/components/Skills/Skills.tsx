@@ -1,7 +1,7 @@
 "use client";
 
-import { Card, HStack, VStack, Heading, Wrap, WrapItem, Box, Icon } from "@chakra-ui/react";
-import { FaJava, FaAws, FaTools, FaRust, FaSwift, } from "react-icons/fa";
+import { Card, HStack, VStack, Heading, Wrap, WrapItem, Icon } from "@chakra-ui/react";
+import { FaJava, FaAws, FaRust, FaSwift, } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import { SiPython, SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiSpringboot, 
   SiPostgresql, SiMysql, SiFirebase, SiMongodb,
@@ -40,7 +40,6 @@ const Skills = () => {
         <Heading size="4xl" fontWeight="bold" textAlign="left" py={4}>
           Skills
         </Heading>
-        <Box fontSize="2xl" as={FaTools} />
       </HStack>
             
       <Flashlight>

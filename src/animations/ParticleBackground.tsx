@@ -22,16 +22,16 @@ const ParticleBackground = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    setParticles(generateParticles(50));
+    setParticles(generateParticles(40));
   }, []);
 
   return (
     <Box
       position="absolute"
-      top={0}
+      top="10vh"
       left={0}
       width="100%"
-      height="100%"
+      height="75vh"
       zIndex={0}
       overflow="hidden"
       pointerEvents="none"

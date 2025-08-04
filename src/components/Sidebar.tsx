@@ -26,6 +26,7 @@ const Sidebar = ({ toggleSpotlight }: { toggleSpotlight: () => void }) => {
       height="auto"
       shadow="lg"
     >
+      
 
       <IconButton variant="ghost" onClick={() => scrollToSection("about")}>
         <FaUser />
