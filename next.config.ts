@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: "export",
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   basePath: isProd ? `/jeremiahsoe` : '',
   assetPrefix: isProd ? `/jeremiahsoe` : '',
   images: {
@@ -12,4 +13,8 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  extension: /\.(md|mdx)$/,
+})
+
+export default withMDX(nextConfig);

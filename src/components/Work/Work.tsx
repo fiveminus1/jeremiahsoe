@@ -7,6 +7,7 @@ import type { Project } from "@/types/types";
 
 const projects: Project[] = [
   {
+    id: 'quote-book-bot',
     title: "Quote Book Bot",
     overview: "A simple Discord bot to store ICSSC Board's various quotes",
     description: "Blah blah blah..." ,
@@ -18,6 +19,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/fiveminus1/quote-bot",
   },
   {
+    id: 'fabflix',
     title: "Fabflix",
     overview: "CS 122B's quarter-long project: a full-stack multiservice architecture movie browsing website",
     description: "Blah blah blah..." ,
@@ -29,6 +31,7 @@ const projects: Project[] = [
     link: "https://youtu.be/MhOHizmFNnI",
   },
   {
+    id: 'sprite-type',
     title: "Sprite Type",
     overview: "A cozy Studio Ghibli-themed typing game built for IrvineHacks 2025 featuring animated custom sprites ",
     description: "Blah blah blah..." ,

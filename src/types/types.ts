@@ -1,5 +1,5 @@
-
 export type Project = {
+  id: string;
   title: string;
   overview: string;
   description: string;
@@ -19,3 +19,7 @@ export type Particle = {
   xOffset: number;
   opacity: number;
 };
+
+export type MDXModule = {
+  default: React.ComponentType<object>;
+}

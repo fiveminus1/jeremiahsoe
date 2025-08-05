@@ -1,12 +1,27 @@
-import { Image, Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton } from "@chakra-ui/react";
+import { Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import ProjectCard from "./ProjectCard";
+import { useState, useEffect } from "react";
+
+const mdxModules: Record<Project['id'], () => Promise<{default: React.FC }>> = {
+  "quote-book-bot": () => import('@/content/projects/quote-book-bot.mdx'),
+};
 
 interface ProjectModalProps {
   project: Project;
 }
 
 const ModalContent = ({ project }: ProjectModalProps) => {
+  const [MDXContent, setMDXContent] = useState<React.FC | null>(null);
+
+  useEffect(() => {
+    if (project.id && mdxModules[project.id]) {
+      mdxModules[project.id]().then((mod) => {
+        setMDXContent(() => mod.default);
+      });
+    }
+  }, [project.id]);
+
   return (
     <>
       <Dialog.Header>
@@ -25,9 +40,12 @@ const ModalContent = ({ project }: ProjectModalProps) => {
         </Dialog.CloseTrigger>
       </Dialog.Header>
       <Dialog.Body overflowY="auto" p={0}>
-        <Image src={project.imageSrc} alt={project.title} />
         <VStack align="start" p={6}>
-          <Text>{project.description}</Text>
+          {MDXContent ? (
+            <MDXContent />
+          ) : (
+            <Text>Loading..</Text> //todo: replace w skeleton
+          )}
         </VStack>
       </Dialog.Body>
     </>
@@ -37,7 +55,7 @@ const ModalContent = ({ project }: ProjectModalProps) => {
 const ProjectModal = ({ project }: ProjectModalProps) => {
   return (
     <>
-      <Dialog.Root scrollBehavior="inside" size="lg">
+      <Dialog.Root scrollBehavior="inside" size="xl">
         <Dialog.Trigger asChild>
           <ProjectCard {...project} />
         </Dialog.Trigger>
