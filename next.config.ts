@@ -11,11 +11,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: ['@next/mdx'],
 };
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
 });
 
-
-export default withMDX(nextConfig);
+module.exports = withMDX(nextConfig);
