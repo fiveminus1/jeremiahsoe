@@ -1,8 +1,13 @@
-import type { NextConfig } from "next";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx$/,
+});
+
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   basePath: isProd ? `/jeremiahsoe` : '',
@@ -12,9 +17,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx$/,
-});
 
 export default withMDX(nextConfig);
