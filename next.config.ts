@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import createMDX from '@next/mdx';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -13,7 +12,8 @@ const nextConfig: NextConfig = {
   },
 };
 
-const withMDX = createMDX({
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const withMDX = require('@next/mdx')({
   extension: /\.mdx$/,
 });
 
