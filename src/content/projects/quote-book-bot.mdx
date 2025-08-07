@@ -14,6 +14,6 @@ You can also use `/leaderboard`  and sort the result by **Most Quoted** or by **
 
 ### Tech Stack
 
-The bot is written in Rust (my first project with the language!), utilizing the [Serenity](https://github.com/serenity-rs/serenity) library and [Poise](https://github.com/serenity-rs/poise) framework. To store the quotes, I started with a SQLite database, since the original intent was to make a lightweight bot that ran locally. Later on, I migrated to PostgreSQL to adapt for containerization/deployment.
+The bot is written in **Rust** (my first project with the language!), utilizing the [Serenity](https://github.com/serenity-rs/serenity) library and [Poise](https://github.com/serenity-rs/poise) framework. To store the quotes, I started with a **SQLite** database, since the original intent was to make a lightweight bot that ran locally. Later on, I migrated to **PostgreSQL** to adapt for containerization/deployment.
 
 The bot itself is hosted on an AWS EC2 instance. I wanted to learn some CI/CD tools for this project, which probably ended up being the longest part of the project. I set up a basic Github Actions workflow to build/push the Docker image of the bot to Docker Hub, then SSH into the EC2 instance and deploy the image.

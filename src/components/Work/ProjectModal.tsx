@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 const mdxModules: Record<Project['id'], () => Promise<{default: React.FC }>> = {
   "quote-book-bot": () => import('@/content/projects/quote-book-bot.mdx'),
+  "fabflix": () => import('@/content/projects/fabflix.mdx'),
 };
 
 interface ProjectModalProps {
