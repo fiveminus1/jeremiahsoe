@@ -27,8 +27,7 @@ const projects: Project[] = [
     tags: [
       "Chakra UI", "React", "Motion", "Next.js", "TypeScript"
     ],
-    githubUrl: "https://github.com/icssc/peterportal-client",
-    link: "https://peterportal.org/",
+    githubUrl: "https://github.com/fiveminus1/jeremiahsoe",
   },
 
   {
