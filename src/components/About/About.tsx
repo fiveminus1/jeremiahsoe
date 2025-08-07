@@ -18,14 +18,13 @@ const About = () => {
         </HStack>
 
         <Text textStyle={textSize}>
-          I&apos;m a software engineer with experience across the stack. Currently, I&apos;m in my fourth year studying Computer Science at UC Irvine. 
+          Currently, I&apos;m in my fourth year studying Computer Science with a specialization in Information and a minor in Informatics.
         </Text>
         <Text>{" "}</Text>
         <Text textStyle={textSize}>
-          At UCI, I&apos;m heavily involved in the <Link color="link" href="https://studentcouncil.ics.uci.edu/">ICS Student Council</Link>. 
-          I work on <Link color="link" href="https://www.instagram.com/icssc.uci/">social media and outreach efforts</Link> towards the greater ICS community as part of the Public Relations Committee. 
-          As a member of the Projects Committee, I contribute to a widely used course planning app, <Link color="link" href="https://peterportal.org/">PeterPortal</Link>. 
-          I also write the club’s <Link color="link" href="https://icssc.link/ICSSCNewsletter">weekly newsletter</Link>.
+          At UC Irvine, I work on social media outreach towards the school of ICS and develop course planning tools as a part of the{' '}
+          <Link color="link" href="https://studentcouncil.ics.uci.edu/">ICS Student Council&apos;s</Link> Public Relations and Projects committees. I also write the club&apos;s{' '}
+          <Link color="link" href="https://icssc.link/ICSSCNewsletter">weekly newsletter</Link>!
         </Text>
         <Text>{" "}</Text>
         <Text textStyle={textSize}>

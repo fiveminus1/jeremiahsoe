@@ -14,7 +14,7 @@ interface ProjectCardProps extends Project {
 
 const MotionCard = motion.create(chakra(Card.Root));
 
-const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, overview, coverImage, tags, onClick, githubUrl, link }: ProjectCardProps) => {
   return (
     <MotionCard 
       mx="auto"
@@ -30,7 +30,7 @@ const ProjectCard = ({ title, overview, imageSrc, tags, onClick, githubUrl, link
       borderColor="gray.800"
     > 
       <Image
-        src={imageSrc}
+        src={coverImage}
         h="200px"
         w="full"
         fit="cover"

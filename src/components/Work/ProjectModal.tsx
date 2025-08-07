@@ -6,7 +6,9 @@ import { useState, useEffect } from "react";
 const mdxModules: Record<Project['id'], () => Promise<{default: React.FC }>> = {
   "quote-book-bot": () => import('@/content/projects/quote-book-bot.mdx'),
   "fabflix": () => import('@/content/projects/fabflix.mdx'),
-  "sprite-type": () => import('@/content/projects/sprite-type.mdx')
+  "sprite-type": () => import('@/content/projects/sprite-type.mdx'),
+  // "peterportal": () => import('@/content/projects/peterportal.mdx'),
+  // "personal-site": () => import('@/content/projects/personal-site.mdx'),
 };
 
 interface ProjectModalProps {
@@ -46,7 +48,7 @@ const ModalContent = ({ project }: ProjectModalProps) => {
           {MDXContent ? (
             <MDXContent />
           ) : (
-            <Text>Loading..</Text> //todo: replace w skeleton
+            <Text>More info coming soon!</Text> //todo: replace w skeleton
           )}
         </VStack>
       </Dialog.Body>
