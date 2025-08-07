@@ -1,4 +1,4 @@
-import { Em, Heading, Link, Text, List, Image } from "@chakra-ui/react";
+import { Em, Heading, Link, Text, List, Image, Code } from "@chakra-ui/react";
 import type { MDXComponents } from "mdx/types";
 
 const spacing = { my: 1};
@@ -12,7 +12,8 @@ const components: MDXComponents = {
   em: (props) => <Em {...props} />,
   ul: (props) => <List.Root pl={5} {...props} />,
   li: (props) => <List.Item paddingY={1} {...props} fontSize="md" />,
-  img: (props) => <Image {...props} alt="" />
+  img: (props) => <Image {...props} paddingY={2} alt="" />,
+  code: (props) => <Code {...props} variant="outline" />
 }
 
 export function useMDXComponents(): MDXComponents {
