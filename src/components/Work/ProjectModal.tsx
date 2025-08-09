@@ -7,7 +7,7 @@ const mdxModules: Record<Project['id'], () => Promise<{default: React.FC }>> = {
   "quote-book-bot": () => import('@/content/projects/quote-book-bot.mdx'),
   "fabflix": () => import('@/content/projects/fabflix.mdx'),
   "sprite-type": () => import('@/content/projects/sprite-type.mdx'),
-  // "peterportal": () => import('@/content/projects/peterportal.mdx'),
+  "peterportal": () => import('@/content/projects/peterportal.mdx'),
   // "personal-site": () => import('@/content/projects/personal-site.mdx'),
 };
 

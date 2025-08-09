@@ -1,10 +1,10 @@
-### Background
+# Background
 
 One of the unofficial tasks of ICSSC Secretary is to maintain a “quote book” of the club’s board members, of which at the end of the year, a Jeopardy game is made with all of the quotes. Previously, the book was kept manually in an iCloud note, and quotes were just logged by messaging the Secretary.
 
 This year, I wanted to make the quote book a little more accessible, and categorization of the quotes at the end of the year a bit more robust. I figured since our main method of communication is Discord, a bot would be a fun and useful side project that I could use to both learn new skills and brush up on some old ones.
 
-### Functionality
+# Functionality
 
 Simply use `/quote` to log a quote from someone. You can optionally specify a date/time for the quote (defaulting to now) using natural language like **"today 2pm,"** or **"6/19 4pm"** thanks to the [interim](https://crates.io/crates/interim) crate. After logging the quote to the PostgreSQL database, the quote is also copied to a Notion database. This command also only displays feedback to the user of the command, so that others aren’t able to see that a quote was logged.
 
@@ -12,7 +12,7 @@ Simply use `/quote` to log a quote from someone. You can optionally specify a da
 
 You can also use `/leaderboard`  and sort the result by **Most Quoted** or by **Most Quotes**. This command does display the results to everyone (but of course not the quotes themselves).
 
-### Tech Stack
+## Tech Stack
 
 The bot is written in **Rust** (my first project with the language!), utilizing the [Serenity](https://github.com/serenity-rs/serenity) library and [Poise](https://github.com/serenity-rs/poise) framework. To store the quotes, I started with a **SQLite** database, since the original intent was to make a lightweight bot that ran locally. Later on, I migrated to **PostgreSQL** to adapt for containerization/deployment.
 

@@ -1,0 +1,19 @@
+# About PeterPortal
+
+PeterPortal is the premier course discovery and planning tool at UCI, built by committee members of ICSSC Projects. It allows you to search for courses and professors, see past data/reviews about them, and create four-year academic planners tailored to your major/minor.
+
+# Background
+
+My involvement with the project began at the start of my third year, during which I was Public Relations Chair at ICSSC. After doing some PR work highlighting the project and its members, I worked on implementing this table component to provide a better visualization of past offerings and got my [first ever PR](https://github.com/icssc/peterportal-client/pull/655) (pull request this time) merged! 
+
+![PeterPortal Recent Offerings Table](/peterportal-recentofferings.png)
+
+I’ve worked on a [couple more PRs](https://github.com/icssc/peterportal-client/pulls?q=is%3Apr+is%3Aclosed+author%3Afiveminus1) after that, such as a review form redesign and adapting AP exam imports from a legacy planner app, and became an official team member during Spring quarter of that year.
+
+![PeterPortal Review Form Redesign](/peterportal-reviewform.png)
+
+## Tech Stack
+
+PeterPortal is a **Next.js** (previously **Vite**) **React** web app, with the frontend using **Bootstrap** (previously) and **Material UI** components. 
+
+The backend uses [**Anteater API**](https://github.com/icssc/anteater-api) for its data, another project by members of ICSSC. **PostgreSQL** is used to store user data, with **Drizzle** as an ORM and **tRPC** for routing.

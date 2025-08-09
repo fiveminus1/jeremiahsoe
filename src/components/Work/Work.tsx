@@ -13,7 +13,7 @@ const projects: Project[] = [
     coverImage: 
       "./peterportal.png",
     tags: [
-      "TypeScript", "React", "SCSS", "Material UI", "PostgreSQL", "tRPC", "Drizzle ORM", "Next.js"
+      "TypeScript", "React", "SCSS", "Bootstrap", "Material UI", "PostgreSQL", "tRPC", "Drizzle ORM", "Next.js"
     ],
     githubUrl: "https://github.com/icssc/peterportal-client",
     link: "https://peterportal.org/",
