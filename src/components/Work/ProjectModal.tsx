@@ -1,30 +1,21 @@
-import { Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton } from "@chakra-ui/react";
+import { Text, VStack, Wrap, Tag, Portal, Dialog, DialogBackdrop, DialogPositioner, DialogContent, CloseButton, Skeleton } from "@chakra-ui/react";
 import type { Project } from "@/types/types";
 import ProjectCard from "./ProjectCard";
-import { useState, useEffect } from "react";
+import { lazy, Suspense } from "react";
 
-const mdxModules: Record<Project['id'], () => Promise<{default: React.FC }>> = {
-  "quote-book-bot": () => import('@/content/projects/quote-book-bot.mdx'),
-  "fabflix": () => import('@/content/projects/fabflix.mdx'),
-  "sprite-type": () => import('@/content/projects/sprite-type.mdx'),
-  "peterportal": () => import('@/content/projects/peterportal.mdx'),
-  "personal-site": () => import('@/content/projects/personal-site.mdx'),
-};
+const getLazyMDX = (id: Project['id']) => 
+  lazy(() => 
+    import(`@/content/projects/${id}.mdx`).catch(() => ({
+      default: () => <Text>More info coming soon!</Text>
+    }))
+  );
 
 interface ProjectModalProps {
   project: Project;
 }
 
 const ModalContent = ({ project }: ProjectModalProps) => {
-  const [MDXContent, setMDXContent] = useState<React.FC | null>(null);
-
-  useEffect(() => {
-    if (project.id && mdxModules[project.id]) {
-      mdxModules[project.id]().then((mod) => {
-        setMDXContent(() => mod.default);
-      });
-    }
-  }, [project.id]);
+  const MDXContent = getLazyMDX(project.id);
 
   return (
     <>
@@ -45,11 +36,9 @@ const ModalContent = ({ project }: ProjectModalProps) => {
       </Dialog.Header>
       <Dialog.Body overflowY="auto" p={0}>
         <VStack align="start" p={6}>
-          {MDXContent ? (
+          <Suspense fallback={<Skeleton height="50px" width="100%" />}>
             <MDXContent />
-          ) : (
-            <Text>More info coming soon!</Text> //todo: replace w skeleton
-          )}
+          </Suspense>
         </VStack>
       </Dialog.Body>
     </>
