@@ -28,7 +28,7 @@ export default function RootLayout({
     <html 
       suppressHydrationWarning
       lang="en"  
-      className={[inter.variable, manrope.variable].join(" ")}
+      className={[inter.variable, manrope.variable, "dark"].join(" ")}
     >
       <body>
         <Provider>

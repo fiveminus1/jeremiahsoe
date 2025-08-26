@@ -21,18 +21,7 @@ const config = defineConfig({
         body: { value: "var(--font-manrope)" },
       },
     },
-    semanticTokens: {
-      colors: {
-        border: {
-          DEFAULT: {
-            value: {
-              _light: "{colors.accentLight}",
-              _dark: "{colors.accentDark}",
-            },
-          },
-        },
-      },
-    },
+
   },
 });
 
